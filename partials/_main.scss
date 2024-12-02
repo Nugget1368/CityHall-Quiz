@@ -1,0 +1,28 @@
+main {
+    @include flex(column, flex-start, center);
+    box-sizing: border-box;
+    padding: 2rem;
+    background-color: $background;
+  article {
+    @include flex();
+    background-color: $background-light;
+    padding: 2rem;
+    min-width: 200px;
+    width: 50%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  }
+  div {
+    @include flex();
+    background-color: $color-1;
+    min-width: 200px;
+    width: 100%;
+    padding: 20px;
+    > div {
+      min-width: 100px;
+      flex: 1;
+      flex-grow: 1;
+      margin: 10px;
+      background-color: $color-2;
+    }
+  }
+}

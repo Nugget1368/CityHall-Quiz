@@ -1,4 +1,43 @@
+main {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 2rem;
+  background-color: #f7f7f7;
+}
+main article {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  background-color: #fff;
+  padding: 2rem;
+  min-width: 200px;
+  width: 50%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+main div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  background-color: #006ebf;
+  min-width: 200px;
+  width: 100%;
+  padding: 20px;
+}
+main div > div {
+  min-width: 100px;
+  flex: 1;
+  flex-grow: 1;
+  margin: 10px;
+  background-color: #fcbf0a;
+}
+
 body, html {
+  background-color: #f7f7f7;
   margin: 0;
   padding: 0;
 }
