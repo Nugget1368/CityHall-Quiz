@@ -4,36 +4,77 @@ main {
   justify-content: flex-start;
   align-items: center;
   box-sizing: border-box;
-  padding: 2rem;
+  padding: 1rem;
   background-color: #f7f7f7;
+}
+@media screen and (min-width: 980px) {
+  main {
+    padding: 2rem;
+  }
+}
+main .btn-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+main * {
+  transition: 0.2s;
 }
 main article {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   justify-content: center;
   align-items: stretch;
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
   background-color: #fff;
-  padding: 2rem;
   min-width: 200px;
-  width: 50%;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
-main div {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: stretch;
-  background-color: #006ebf;
-  min-width: 200px;
-  width: 100%;
-  padding: 20px;
+@media screen and (min-width: 980px) {
+  main article {
+    width: 50%;
+    padding: 2rem;
+  }
 }
-main div > div {
-  min-width: 100px;
-  flex: 1;
-  flex-grow: 1;
-  margin: 10px;
-  background-color: #fcbf0a;
+main article > * {
+  margin: 5px 0px;
+}
+main article h2 {
+  margin: 0;
+}
+main article ul {
+  list-style-type: none;
+  padding: 0;
+}
+main article ul li {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5px 0px;
+}
+main article button {
+  border-radius: 5px;
+  padding: 4px 7px;
+  border: 2px solid #006ebf;
+}
+main article button:active {
+  box-shadow: inset 2px 2px #fff, inset -2px -2px #fff, inset -2px 2px #fff, inset 2px -2px #fff;
+}
+main article button.primary-btn {
+  color: #fff;
+  background-color: #006ebf;
+  border-color: #075b97;
+}
+main article button.primary-btn:hover {
+  background-color: #5bb0ff;
+}
+main article button.primary-btn:active {
+  background-color: #075b97;
+  transform: scale(0.92);
 }
 
 body, html {

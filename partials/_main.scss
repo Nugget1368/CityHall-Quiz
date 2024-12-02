@@ -1,28 +1,64 @@
 main {
-    @include flex(column, flex-start, center);
-    box-sizing: border-box;
+  @include flex(column, flex-start, center);
+  @include desktop() {
     padding: 2rem;
-    background-color: $background;
-  article {
-    @include flex();
-    background-color: $background-light;
-    padding: 2rem;
-    min-width: 200px;
-    width: 50%;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   }
-  div {
-    @include flex();
-    background-color: $color-1;
-    min-width: 200px;
+  box-sizing: border-box;
+  padding: 1rem;
+  background-color: $background;
+  .btn-container {
+    @include flex($justify: flex-end);
+  }
+  * {
+    transition: 0.2s;
+  }
+  article {
+    @include flex(column);
+    @include desktop() {
+      width: 50%;
+      padding: 2rem;
+    }
+    box-sizing: border-box;
+    padding: 1rem;
     width: 100%;
-    padding: 20px;
-    > div {
-      min-width: 100px;
-      flex: 1;
-      flex-grow: 1;
-      margin: 10px;
-      background-color: $color-2;
+    background-color: $background-light;
+    min-width: 200px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    > * {
+      margin: 5px 0px;
+    }
+    h2 {
+      margin: 0;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      li {
+        @include flex(row, flex-start, center);
+        margin: 5px 0px;
+      }
+    }
+
+    button {
+      border-radius: 5px;
+      padding: 4px 7px;
+      border: 2px solid $color-1;
+      &:active {
+        box-shadow: inset 2px 2px #fff, inset -2px -2px #fff,
+          inset -2px 2px #fff, inset 2px -2px #fff;
+      }
+    }
+    button.primary-btn {
+      color: $background-light;
+      background-color: $color-1;
+      border-color: $color-1-dark;
+      &:hover {
+        background-color: $color-1-light;
+      }
+      &:active {
+        background-color: $color-1-dark;
+        transform: scale(0.92);
+      }
     }
   }
 }
