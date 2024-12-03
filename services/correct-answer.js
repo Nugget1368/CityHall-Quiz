@@ -4,7 +4,7 @@ import questions from "../models/questions.js";
 const compareArrays = (arr1, arr2) => JSON.stringify(arr1) === JSON.stringify(arr2);
 
 const displayArray = (arr) =>{
-    return JSON.stringify(arr).replaceAll(`","`, ", ").replaceAll(`["`, "").replaceAll(`"]`, "").replaceAll(/(?<=\.)\,/g, "<br>");
+    return JSON.stringify(arr).replaceAll(`","`, ", ").replaceAll(`["`, "").replaceAll(`"]`, "").replaceAll(/(?<=\.)\,/g, "<br><br>");
 }
 
 export const correct = (index) => {
@@ -25,7 +25,7 @@ export const showDescription = (index, isCorrect) => {
     let p = document.querySelector("aside p.description");
     let h3 = document.querySelector("aside header h3");
     p.innerHTML = "";
-    p.innerHTML = `${questions[index].description}`;
+    p.innerHTML = `${displayArray(questions[index].description)}`;
     aside.style.display = "flex";
     if(isCorrect){
         h3.innerHTML = `Korrekt!`;
