@@ -10,7 +10,7 @@ description: [
 ],
 },
 {
-question: `Blå Hallen är ett av Stadshusets mest berömda rum. Den har har en yta på 1500 kvadratmeter och är starkt influerad av italensk renesans vilket tydligt speglas i bl.a pelargången somomringar hallen. <br>Men hur kommer det sig att Blå Hallen kallas för just Blå Hallen, även fast att den inte är särskilt blå alls?`,
+question: `Blå Hallen är ett av Stadshusets mest berömda rum. Den har har en yta på 1500 kvadratmeter och är starkt influerad av italensk renesans vilket tydligt speglas i bl.a pelargången som omringar hallen. <br>Men hur kommer det sig att Blå Hallen kallas för just Blå Hallen, även fast att den inte är särskilt blå alls?`,
 alternatives: [
 `Blå var arkitekten Ragnar Östbergs favoritfärg och han ville därför att rummet skulle spegla detta och ha den färgen samt döpas till Blå Hallen,
 men han fick avslag av regeringen som tyckte detta var alltför kontroversiellt.`,
