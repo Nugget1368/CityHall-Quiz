@@ -89,6 +89,17 @@ main article button.secondary-btn:active {
   background-color: #5bb0ff;
   transform: scale(0.92);
 }
+main article aside {
+  display: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #faaeae;
+  border: 2px solid #b61717;
+}
+main article aside p, main article aside h3 {
+  margin: 5px;
+}
 
 body, html {
   background-color: #f7f7f7;

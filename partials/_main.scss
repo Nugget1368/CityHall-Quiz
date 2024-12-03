@@ -73,5 +73,17 @@ main {
         transform: scale(0.92);
       }
     }
+    aside{
+      display: none;
+      box-sizing: border-box;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: $red-light;
+      border: 2px solid $red;
+      p, h3{
+        margin: 5px;
+      }
+      
+    }
   }
 }
