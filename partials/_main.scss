@@ -34,8 +34,8 @@ main {
       list-style-type: none;
       padding: 0;
       li {
-        @include flex(row, flex-start, center);
-        margin: 5px 0px;
+        @include flex(row, flex-start, flex-start);
+        margin: 15px 0px;
       }
     }
 
