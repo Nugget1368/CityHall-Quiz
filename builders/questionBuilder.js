@@ -12,12 +12,12 @@ const buildQuestion = (index) => {
     ul.innerHTML = "";
     header.innerHTML = `Fråga #${index + 1}`;
     p.innerHTML = `${question.question}`;
+    let alternativesIndex = 0;
     question.alternatives.forEach(alt =>{
         let li = document.createElement("li");
-        li.innerHTML = `<input type="${inputType}" id="${alt}" name="answer"/><label for="${alt}">${alt}</label>`;
-        console.log(li);
+        li.innerHTML = `<input type="${inputType}" value="${alternativesIndex}" id="${alt}" name="answer"/><label for="${alt}">${alt}</label>`;
+        alternativesIndex++;
         ul.append(li);
-        console.log(ul);
     });
 }
 

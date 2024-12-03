@@ -4,7 +4,7 @@ const questions = [
         evenemang rum, Nobelfesten. Idag hålls Nobelmiddagen i Blå Hallen
         men stämmer det att den tidigare ägt rum i Gyllene Salen?`,
     alternatives: ["Sant", "Falskt"],
-    answers: [1],
+    answers: [0],
     description: [
       `Det var 1974 som antalet gäster till Nobelfesten vuxit så pass mycket
             att beslutet togs att permanent flytta middagen ner från Gyllene Salen till Blå Hallen.
@@ -29,7 +29,7 @@ const questions = [
       och kallades för detta av alla som arbetade på bygget. Sedan blev det en snöbollseffekt där alla inblandade kallade hallen för detta
       och det var då enklare att låta namnet bestå än att försöka sig på att ändra något.`,
     ],
-    answers: [3],
+    answers: [2],
     description: [
       `När arkitekten väl hade ändrat sin uppfattning om Blå Hallens utseende var det försent att försöka ändra på namnet.
       Blå Hallens namn stog redan i alla projektets ritningar, och det hade t.o.m skrivits om Blå Hallen i tidningarna, 
@@ -46,7 +46,7 @@ const questions = [
       `Arkitektens första fru, Elsa Skoglund`,
       `Drottning Victoria, Drottning till kung Gustav V som satt på tronen under byggnationen av Stadshusets`,
     ],
-    answers: [2],
+    answers: [1],
     description: [
       `Mälardrottningen är en symbol av Stockholm och det sägs att konstnären Einar Forseth ska ha använt sig av
       sin egna fru som inspirationskälla när han bildade Mälardrottningen.`,
@@ -61,7 +61,7 @@ const questions = [
       `Kungliga Tekniska Högskolan i Stockholm`,
       `Grand Hôtel`,
     ],
-    answers: [1, 2, 4],
+    answers: [0, 1, 3],
     description: [
         `Den första Nobelcermonin ägde rum 1901 på Grand Hôtel i Stockholm.`,
         `1972 var Konserthuset stängt för renovering och Nobelpriset delades ut på Stockholmsmässan i Älvsjö, på den tiden hette det S:t Eriksmässan.`,
