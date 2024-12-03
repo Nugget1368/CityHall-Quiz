@@ -1,11 +1,9 @@
 
 import questions from "../models/questions.js";
-
-const compareArrays = (arr1, arr2) => JSON.stringify(arr1) === JSON.stringify(arr2);
-
-const displayArray = (arr) =>{
-    return JSON.stringify(arr).replaceAll(`","`, ", ").replaceAll(`["`, "").replaceAll(`"]`, "").replaceAll(/(?<=\.)\,/g, "<br><br>");
-}
+import {
+    compareArrays,
+    displayArray,
+} from "./arrayManipulation.js";
 
 export const correct = (index) => {
     const answers = document.querySelectorAll("input:checked");
