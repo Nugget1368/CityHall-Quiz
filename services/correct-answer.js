@@ -3,6 +3,10 @@ import questions from "../models/questions.js";
 
 const compareArrays = (arr1, arr2) => JSON.stringify(arr1) === JSON.stringify(arr2);
 
+const displayArray = (arr) =>{
+    return JSON.stringify(arr).replaceAll(`","`, ", ").replaceAll(`["`, "").replaceAll(`"]`, "").replaceAll(/(?<=\.)\,/g, "<br>");
+}
+
 export const correct = (index) => {
     const answers = document.querySelectorAll("input:checked");
     const arrayAnswers = [];
@@ -31,10 +35,10 @@ export const showDescription = (index, isCorrect) => {
     else{
         h3.innerHTML = `Fel!`;
         p.innerHTML = 
-        `<strong>Rätt Svar:</strong> Alternativ ${questions[index].answers.map(i => (i+1) + ". " + questions[index].alternatives[i])}
+        `<strong>Rätt Svar:</strong> Alternativ ${displayArray(questions[index].answers.map(i => (i+1) + ". " + questions[index].alternatives[i]))}
         <br/>
         <br/>
-        ${questions[index].description}`;
+        ${displayArray(questions[index].description)}`;
         aside.style.backgroundColor = "#faaeae";
         aside.style.borderColor = "#b61717";
     }
