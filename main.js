@@ -17,5 +17,6 @@ document.querySelector("button#next-question").addEventListener("click", () => {
 });
 
 document.querySelector("button#answer-question").addEventListener("click", () =>{
-    correct(questionIndex);
+    let corrected = correct(questionIndex);
+    console.log("Answer Correct: " + corrected);
 })
