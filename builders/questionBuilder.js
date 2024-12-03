@@ -9,6 +9,7 @@ const buildQuestion = (index) => {
     const ul = document.querySelector("ul.alternatives")
     const inputType = question.answers.length > 1 ? "checkbox" : "radio";
     
+    ul.innerHTML = "";
     header.innerHTML = `Fråga #${index + 1}`;
     p.innerHTML = `${question.question}`;
     question.alternatives.forEach(alt =>{
