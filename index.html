@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="style.css" />
     <!-- Glöm inte defer <3 -->
     <script src="./builders/questionBuilder.js" type="module"></script>
+    <script  src="./services/correct-answer.js" type="module"></script>
     <script src="main.js" type="module"></script>
     <title>City Hall Quiz</title>
   </head>
@@ -27,10 +28,18 @@
           <p class="question"></p>
           <ul class="alternatives"></ul>
         </section>
+        <aside>
+          <section>
+            <header>
+              <h3>lorem</h3>
+            </header>
+            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias eveniet consequuntur recusandae facere unde labore velit laboriosam itaque. Asperiores sapiente consequatur explicabo voluptatem alias ea, expedita eum omnis tempore dolor!</p>
+          </section>
+        </aside>
         <footer>
           <section class="btn-container">
-            <button class="primary-btn">Svara</button>
-            <button id="next-question" class="secondary-btn">Nästa</button>
+            <button id="answer-question" class="primary-btn">Svara</button>
+            <button id="next-question" class="secondary-btn" disabled="true">Nästa</button>
           </section>
         </footer>
       </article>
