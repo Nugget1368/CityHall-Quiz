@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <!-- Glöm inte defer <3 -->
+    <script src="./builders/questionBuilder.js" type="module"></script>
     <script src="main.js" type="module"></script>
     <title>City Hall Quiz</title>
   </head>
@@ -20,19 +21,30 @@
     <main>
       <article>
         <header>
-            <h2>Fråga #X</h2>
+          <h2>Fråga #X</h2>
         </header>
         <section>
-            <p class="question">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo architecto, dignissimos repudiandae dicta ullam ipsa rerum delectus quod fuga consequuntur et vitae quas hic. Inventore, quisquam corrupti. Delectus, nobis sit!</p>
-            <ul class="alternatives">
-                <li><input type="radio" id="sant" name="answer"><label for="sant">Sant</label></li>
-                <li><input type="radio" id="falskt" name="answer"><label for="falskt">Falskt</label></li>
-            </ul>
+          <p class="question">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+            architecto, dignissimos repudiandae dicta ullam ipsa rerum delectus
+            quod fuga consequuntur et vitae quas hic. Inventore, quisquam
+            corrupti. Delectus, nobis sit!
+          </p>
+          <ul class="alternatives">
+            <li>
+              <input type="radio" id="sant" name="answer" />
+              <label for="sant">Sant</label>
+            </li>
+            <li>
+              <input type="radio" id="falskt" name="answer" />
+              <label for="falskt">Falskt</label>
+            </li>
+          </ul>
         </section>
         <footer>
-            <section class="btn-container">
-                <button class="primary-btn">Svara</button>
-            </section>
+          <section class="btn-container">
+            <button class="primary-btn">Svara</button>
+          </section>
         </footer>
       </article>
     </main>
