@@ -1,6 +1,5 @@
 import buildQuestion from "./builders/questionBuilder.js";
 import questions from "./models/questions.js";
-// import correct from "./services/correct-answer.js";
 import {
   correct,
   showDescription,
