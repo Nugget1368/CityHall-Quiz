@@ -60,6 +60,7 @@ main article button {
   border-radius: 5px;
   padding: 4px 7px;
   border: 2px solid #006ebf;
+  margin: 2px;
 }
 main article button:active {
   box-shadow: inset 2px 2px #fff, inset -2px -2px #fff, inset -2px 2px #fff, inset 2px -2px #fff;
@@ -74,6 +75,18 @@ main article button.primary-btn:hover {
 }
 main article button.primary-btn:active {
   background-color: #075b97;
+  transform: scale(0.92);
+}
+main article button.secondary-btn {
+  color: #075b97;
+  background-color: #fff;
+  border-color: #075b97;
+}
+main article button.secondary-btn:hover {
+  background-color: #badeff;
+}
+main article button.secondary-btn:active {
+  background-color: #5bb0ff;
   transform: scale(0.92);
 }
 

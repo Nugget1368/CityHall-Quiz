@@ -43,6 +43,7 @@ main {
       border-radius: 5px;
       padding: 4px 7px;
       border: 2px solid $color-1;
+      margin: 2px;
       &:active {
         box-shadow: inset 2px 2px #fff, inset -2px -2px #fff,
           inset -2px 2px #fff, inset 2px -2px #fff;
@@ -57,6 +58,18 @@ main {
       }
       &:active {
         background-color: $color-1-dark;
+        transform: scale(0.92);
+      }
+    }
+    button.secondary-btn {
+      color: $color-1-dark;
+      background-color: $background-light;
+      border-color: $color-1-dark;
+      &:hover {
+        background-color: $color-1-lighter;
+      }
+      &:active {
+        background-color: $color-1-light;
         transform: scale(0.92);
       }
     }
