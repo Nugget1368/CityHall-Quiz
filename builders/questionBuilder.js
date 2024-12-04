@@ -1,5 +1,4 @@
 import questions from "../models/questions.js";
-console.log(questions);
 
 const buildQuestion = (index) => {
     const question = questions[index];
