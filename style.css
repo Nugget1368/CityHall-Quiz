@@ -107,13 +107,27 @@ main article button.secondary-btn:active {
   background-color: #5bb0ff;
   transform: scale(0.92);
 }
+main article aside.green {
+  display: flex;
+  background-color: #d0ffce;
+  border-color: #0d8d08;
+}
+main article aside.yellow {
+  display: flex;
+  background-color: #ffeaad;
+  border-color: #c29409;
+}
+main article aside.red {
+  display: flex;
+  background-color: #faaeae;
+  border-color: #b61717;
+}
 main article aside {
   display: none;
+  border: 2px solid black;
   box-sizing: border-box;
   border-radius: 5px;
   padding: 10px;
-  background-color: #faaeae;
-  border: 2px solid #b61717;
 }
 main article aside p, main article aside h3 {
   margin: 5px;

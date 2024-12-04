@@ -86,13 +86,27 @@ main {
         transform: scale(0.92);
       }
     }
+    aside.green{
+      display: flex;
+      background-color: $green-light;
+      border-color: $green;
+    }
+    aside.yellow{
+      display: flex;
+      background-color: $yellow-light;
+      border-color: $yellow-dark;
+    }
+    aside.red{
+      display: flex;
+      background-color: $red-light;
+      border-color: $red;
+    }
     aside{
       display: none;
+      border: 2px solid black;
       box-sizing: border-box;
       border-radius: 5px;
       padding: 10px;
-      background-color: $red-light;
-      border: 2px solid $red;
       p, h3{
         margin: 5px;
       }

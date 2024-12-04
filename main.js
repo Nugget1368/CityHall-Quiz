@@ -9,9 +9,9 @@ import buildResult from "./builders/resultBuilder.js";
 
 let questionIndex = 0;
 let playerScore = 0;
-// buildQuestion(questionIndex);
-///DELETE
-buildResult(3, questions);
+ //buildQuestion(questionIndex);
+///DELETE THIS
+ buildResult(4, questions);
 
 //Next question
 let nextBtn = document.querySelector("button#next-question");
@@ -25,6 +25,7 @@ nextBtn.addEventListener("click", () => {
   } else {
     //Show Result-page
     buildResult(playerScore, questions);
+    //Byt ut knappar till avsluta knapp/starta om.
   }
 });
 
