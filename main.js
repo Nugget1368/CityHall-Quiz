@@ -9,9 +9,11 @@ import buildResult from "./builders/resultBuilder.js";
 
 let questionIndex = 0;
 let playerScore = 0;
- //buildQuestion(questionIndex);
+let questionsCopy = [...questions]
+console.log(questionsCopy);
+ buildQuestion(questionIndex);
 ///DELETE THIS
- buildResult(4, questions);
+//  buildResult(4, questionsCopy);
 
 //Next question
 let nextBtn = document.querySelector("button#next-question");
@@ -19,12 +21,12 @@ nextBtn.addEventListener("click", () => {
   hideDescription();
   nextBtn.disabled = true;
   answerBtn.disabled = false;
-  if (questionIndex < questions.length -1) {
+  if (questionIndex < questionsCopy.length -1) {
     questionIndex++;
     buildQuestion(questionIndex);
   } else {
     //Show Result-page
-    buildResult(playerScore, questions);
+    buildResult(playerScore, questionsCopy);
     //Byt ut knappar till avsluta knapp/starta om.
   }
 });

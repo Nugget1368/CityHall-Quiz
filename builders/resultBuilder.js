@@ -17,6 +17,8 @@ const buildResult = (playerScore, questionsArr) => {
   h2.innerHTML = "Resultat";
   p.innerHTML = `Du har slutfört Stockhom Stadshus Quiz. Nedan finner du en sammanställning av dina totala poäng samt ifall du har klarat quizet eller inte. <br><br>Du finner även en lista med alla frågor och svar ifrån quizet, de frågor du inte klarat är markerade i rött.`;
   h3.innerHTML = `Korrekthet: ${scorePercentage}%`;
+  aside.style.display = "flex;"
+  console.log(scorePercentage);
   if (scorePercentage <= 50) {
     aside.classList = "red";
     description.innerHTML = `Av ${questionsArr.length} frågor hade du ${playerScore} rätt vilket är ett för lågt betyg. Läs igenom de frågor du hade fel på nedan och gör om quizet när studerat lite mer.`;

@@ -171,6 +171,9 @@ main article aside h3 {
 main article.result {
   display: none;
 }
+main .hide {
+  display: none;
+}
 
 body, html {
   background-color: #f7f7f7;

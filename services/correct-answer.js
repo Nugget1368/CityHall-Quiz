@@ -5,16 +5,12 @@ export const correct = (index) => {
   const answers = document.querySelectorAll("input:checked");
   const arrayAnswers = [];
   answers.forEach((answer) => arrayAnswers.push(Number(answer.value)));
-  if (compareArrays(arrayAnswers, questions[index].answers)) {
-    return true;
-  }
-  return false;
+  return compareArrays(arrayAnswers, questions[index].answers) ? questions[index].iscorrect = true : questions[index].iscorrect = false;
 };
 
 export const hideDescription = () => {
   const aside = document.querySelector("aside");
-  aside.classList = "";
-  aside.style.display = "none";
+  aside.classList = "hide";
 };
 
 export const showDescription = (index, isCorrect) => {
@@ -23,7 +19,6 @@ export const showDescription = (index, isCorrect) => {
   let h3 = document.querySelector("aside header h3");
   p.innerHTML = "";
   p.innerHTML = `${displayArray(questions[index].description)}`;
-  aside.style.display = "flex";
   if (isCorrect) {
     aside.classList = "green";
     h3.innerHTML = `Korrekt!`;
