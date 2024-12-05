@@ -1,3 +1,6 @@
+import {
+    markIncorrect
+}from "../services/accordionManipulation.js"
 
 export const buildAccordionQuestions = (targetSelector, questionsArray) => {
   questionsArray.forEach((question, index) => {
@@ -5,8 +8,11 @@ export const buildAccordionQuestions = (targetSelector, questionsArray) => {
     const correctAlternatives = `Rätt Svar: ${correctAnswers.map((answer) => "\n" + (answer+1) + ". " + question.alternatives[answer])}`;
     const paragraphs = [question.question, correctAlternatives];
     buildAccordion(targetSelector, `Fråga #${index + 1}`, paragraphs);
+    if(!question.iscorrect){
+        console.log(index);
+        markIncorrect(index);
+    }
   });
-  toggleItem();
 };
 
 const buildAccordion = (targetSelector, header, paragraphs) =>{
@@ -22,10 +28,3 @@ const buildAccordion = (targetSelector, header, paragraphs) =>{
     })
     ul.append(li);
 }
-
-const toggleItem = () => {
-  let labels = document.querySelectorAll(".accordion label");
-  labels.forEach((label) => {
-    label.addEventListener("click", () => label.classList.toggle("active"));
-  });
-};

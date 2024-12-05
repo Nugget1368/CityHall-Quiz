@@ -55,6 +55,18 @@ main .accordion li label ~ * {
 main .accordion li label:hover {
   background-color: #badeff;
 }
+main .accordion li.incorrect {
+  background-color: #fcd6d6;
+}
+main .accordion li.incorrect label {
+  background-color: #faaeae;
+}
+main .accordion li.incorrect label:hover {
+  background-color: #f79292;
+}
+main .accordion li.incorrect label.active {
+  background-color: #f79292;
+}
 main .accordion .active {
   background-color: #badeff;
 }

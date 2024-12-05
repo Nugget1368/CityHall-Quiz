@@ -41,6 +41,18 @@ main {
         }
       }
     }
+    li.incorrect {
+      background-color: $red-lighter;
+      label {
+        background-color: $red-light;
+        &:hover {
+          background-color: $red-light-dark;
+        }
+        &.active {
+          background-color: $red-light-dark;
+        }
+      }
+    }
 
     .active {
       background-color: $color-1-lighter;
@@ -153,7 +165,7 @@ main {
   article.result {
     display: none;
   }
-  .hide{
+  .hide {
     display: none;
   }
 }

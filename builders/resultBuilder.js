@@ -1,6 +1,9 @@
+import { buildAccordionQuestions } from "./accordionBuilder.js";
+
 import {
-    buildAccordionQuestions,
-} from "./accordionBuilder.js";
+  toggleItem,
+  markIncorrect,
+} from "../services/accordionManipulation.js";
 
 const buildResult = (playerScore, questionsArr) => {
   const articleResult = document.querySelector("article.result");
@@ -17,7 +20,7 @@ const buildResult = (playerScore, questionsArr) => {
   h2.innerHTML = "Resultat";
   p.innerHTML = `Du har slutfört Stockhom Stadshus Quiz. Nedan finner du en sammanställning av dina totala poäng samt ifall du har klarat quizet eller inte. <br><br>Du finner även en lista med alla frågor och svar ifrån quizet, de frågor du inte klarat är markerade i rött.`;
   h3.innerHTML = `Korrekthet: ${scorePercentage}%`;
-  aside.style.display = "flex;"
+  aside.style.display = "flex;";
   console.log(scorePercentage);
   if (scorePercentage <= 50) {
     aside.classList = "red";
@@ -30,9 +33,9 @@ const buildResult = (playerScore, questionsArr) => {
     description.innerHTML = `Av ${questionsArr.length} frågor hade du ${playerScore} rätt. Bra jobbat, du är godkänd på quizet! Men bli inte för bekväm, det finns alltid mer att lära sig. Stockhoms Stadshus är fullt av historia och gömda detaljer som sträcker sig utanför detta quiz.`;
   }
 
-
   //Skapa accordion och skriv ut frågor och svar
   buildAccordionQuestions("article.result", questionsArr);
+  toggleItem();
 };
 
 export default buildResult;

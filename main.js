@@ -13,7 +13,7 @@ let questionsCopy = [...questions]
 console.log(questionsCopy);
  buildQuestion(questionIndex);
 ///DELETE THIS
-//  buildResult(4, questionsCopy);
+//  buildResult(3, questionsCopy);
 
 //Next question
 let nextBtn = document.querySelector("button#next-question");
