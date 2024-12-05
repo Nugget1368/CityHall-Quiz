@@ -1,7 +1,8 @@
 import {
-    markIncorrect
-}from "../services/accordionManipulation.js"
-
+    toggleItem,
+    markIncorrect,
+  } from "../services/accordionManipulation.js";
+  
 export const buildAccordionQuestions = (targetSelector, questionsArray) => {
   questionsArray.forEach((question, index) => {
     const correctAnswers = question.answers;
@@ -13,6 +14,7 @@ export const buildAccordionQuestions = (targetSelector, questionsArray) => {
         markIncorrect(index);
     }
   });
+  toggleItem();
 };
 
 const buildAccordion = (targetSelector, header, paragraphs) =>{

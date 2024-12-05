@@ -12,8 +12,6 @@ let playerScore = 0;
 let questionsCopy = [...questions]
 console.log(questionsCopy);
  buildQuestion(questionIndex);
-///DELETE THIS
-//  buildResult(3, questionsCopy);
 
 //Next question
 let nextBtn = document.querySelector("button#next-question");
@@ -25,9 +23,8 @@ nextBtn.addEventListener("click", () => {
     questionIndex++;
     buildQuestion(questionIndex);
   } else {
-    //Show Result-page
     buildResult(playerScore, questionsCopy);
-    //Byt ut knappar till avsluta knapp/starta om.
+    //TODO Byt ut knappar till avsluta knapp/starta om.
   }
 });
 
