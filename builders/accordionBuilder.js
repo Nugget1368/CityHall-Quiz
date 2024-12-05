@@ -1,36 +1,27 @@
-import { displayArray } from "../services/arrayManipulation.js";
 
-const buildQuestionsAccordion = (target, header, questionsArr) => {
-  let ul = document.querySelector(`${target} .accordion`);
-  for (let x = 0; x < questionsArr.length; x++) {
-    let li = document.createElement("li");
-    let label = document.createElement("label");
-    let question = document.createElement("p");
-    let correctAnswer = document.createElement("p");
-    label.innerText = header + (x + 1);
-
-    question.innerText = questionsArr[x].question;
-    let answer = questionsArr[x].answers;
-    let correctAlt = "";
-    if (answer.length > 1) {
-      for (let index = 0; index < answer.length; index++) {
-        correctAlt +=
-          "\n" + (index + 1) + ". " + questionsArr[x].alternatives[index] + " ";
-        console.log(questionsArr[x].alternatives[index]);
-      }
-      correctAnswer.innerText = "Rätt Svar: " + correctAlt;
-    } else {
-      correctAlt = questionsArr[x].alternatives[answer];
-      // console.log(correctAlt);
-      correctAnswer.innerText = "Rätt Svar: " + correctAlt;
-    }
-
-    li.append(label);
-    li.append(question, correctAnswer);
-    ul.append(li);
-  }
+const buildQuestionsAccordion = (targetSelector, questionsArray) => {
+  questionsArray.forEach((question, index) => {
+    const correctAnswers = question.answers;
+    const correctAlternatives = `Rätt Svar: ${correctAnswers.map((answer) => "\n" + (answer+1) + ". " + question.alternatives[answer])}`;
+    const paragraphs = [question.question, correctAlternatives];
+    buildAccordion(targetSelector, `Fråga #${index + 1}`, paragraphs);
+  });
   toggleItem();
 };
+
+const buildAccordion = (targetSelector, header, paragraphs) =>{
+    const ul = document.querySelector(`${targetSelector} .accordion`);
+    const label = document.createElement("label");
+    const li = document.createElement("li");
+    label.innerText = header;
+    li.append(label);
+    paragraphs.forEach(pargraph =>{
+        let p = document.createElement("p");
+        p.innerText = pargraph;
+        li.append(p);
+    })
+    ul.append(li);
+}
 
 const toggleItem = () => {
   let labels = document.querySelectorAll(".accordion label");

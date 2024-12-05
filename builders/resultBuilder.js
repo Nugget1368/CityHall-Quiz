@@ -28,7 +28,7 @@ const buildResult = (playerScore, questionsArr) => {
 
 
   //Skapa accordion och skriv ut frågor och svar
-  buildQuestionAccordion("article.result", "Fråga #", questionsArr);
+  buildQuestionAccordion("article.result", questionsArr);
 };
 
 export default buildResult;
