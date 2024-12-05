@@ -26,6 +26,41 @@ main .btn-container {
     align-items: stretch;
   }
 }
+main .accordion li {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background-color: #f7f7f7;
+  box-shadow: 2px 2px #ebebeb, -2px -2px #ebebeb, -2px 2px #ebebeb, 2px -2px #ebebeb;
+}
+main .accordion li:hover {
+  background-color: #ebebeb;
+}
+main .accordion li label {
+  box-sizing: border-box;
+  box-shadow: 2px 2px #ebebeb, -2px -2px #ebebeb, -2px 2px #ebebeb, 2px -2px #ebebeb;
+  width: 100%;
+  background-color: #f7f7f7;
+  padding: 10px;
+}
+main .accordion li label ~ * {
+  display: none;
+  box-sizing: border-box;
+  padding: 10px;
+}
+main .accordion li label:hover {
+  background-color: #badeff;
+}
+main .accordion .active {
+  background-color: #badeff;
+}
+main .accordion .active ~ * {
+  display: flex;
+}
 main * {
   transition: 0.2s;
 }
@@ -129,7 +164,8 @@ main article aside {
   border-radius: 5px;
   padding: 10px;
 }
-main article aside p, main article aside h3 {
+main article aside p,
+main article aside h3 {
   margin: 5px;
 }
 main article.result {
