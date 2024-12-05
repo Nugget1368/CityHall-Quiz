@@ -1,4 +1,6 @@
-import buildQuestionAccordion from "./accordionBuilder.js";
+import {
+    buildAccordionQuestions,
+} from "./accordionBuilder.js";
 
 const buildResult = (playerScore, questionsArr) => {
   const articleResult = document.querySelector("article.result");
@@ -28,7 +30,7 @@ const buildResult = (playerScore, questionsArr) => {
 
 
   //Skapa accordion och skriv ut frågor och svar
-  buildQuestionAccordion("article.result", questionsArr);
+  buildAccordionQuestions("article.result", questionsArr);
 };
 
 export default buildResult;

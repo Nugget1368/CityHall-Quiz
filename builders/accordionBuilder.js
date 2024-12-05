@@ -1,5 +1,5 @@
 
-const buildQuestionsAccordion = (targetSelector, questionsArray) => {
+export const buildAccordionQuestions = (targetSelector, questionsArray) => {
   questionsArray.forEach((question, index) => {
     const correctAnswers = question.answers;
     const correctAlternatives = `Rätt Svar: ${correctAnswers.map((answer) => "\n" + (answer+1) + ". " + question.alternatives[answer])}`;
@@ -29,5 +29,3 @@ const toggleItem = () => {
     label.addEventListener("click", () => label.classList.toggle("active"));
   });
 };
-
-export default buildQuestionsAccordion;
