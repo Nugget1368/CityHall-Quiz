@@ -1,11 +1,10 @@
 import questions from "../models/questions.js";
-console.log(questions);
 
 const buildQuestion = (index) => {
     const question = questions[index];
     const header = document.querySelector("article section header h2");
     console.log(header);
-    const p = document.querySelector("p.question");
+    const p = document.querySelector("p.content");
     const ul = document.querySelector("ul.alternatives")
     const inputType = question.answers.length > 1 ? "checkbox" : "radio";
     
