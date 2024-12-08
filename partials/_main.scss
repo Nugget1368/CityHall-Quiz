@@ -19,7 +19,7 @@ main {
       margin: 0;
       padding: 0;
       text-align: left;
-      background-color: var(--background);
+      background-color: var(--gray-light);
       box-shadow: 2px 2px var(--gray-light), -2px -2px var(--gray-light),
         -2px 2px var(--gray-light), 2px -2px var(--gray-light);
       &:hover {
@@ -107,6 +107,7 @@ main {
       padding: 4px 7px;
       border: 2px solid var(--color-1);
       margin: 2px;
+      color: var(--text-color);
       &:active {
         box-shadow: inset 2px 2px #fff, inset -2px -2px #fff,
           inset -2px 2px #fff, inset 2px -2px #fff;
@@ -125,7 +126,6 @@ main {
       }
     }
     button.secondary-btn {
-      color: var(--color-1-dark);
       background-color: var(--background-light);
       border-color: var(--color-1-dark);
       &:hover {
