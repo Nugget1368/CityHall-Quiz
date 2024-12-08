@@ -14,7 +14,7 @@ const buildQuestion = (index) => {
     let alternativesIndex = 0;
     question.alternatives.forEach(alt =>{
         let li = document.createElement("li");
-        li.innerHTML = `<input type="${inputType}" value="${alternativesIndex}" id="${alt}" name="answer"/><label for="${alt}">${alt}</label>`;
+        li.innerHTML = `<input type="${inputType}" value="${alternativesIndex}" id="${alt}" class="alternative" name="answer"/><label for="${alt}">${alt}</label>`;
         alternativesIndex++;
         ul.append(li);
     });

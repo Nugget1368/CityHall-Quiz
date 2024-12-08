@@ -1,9 +1,9 @@
-@import "./partials/variables.scss";
+@import "./partials/coloring.scss";
 @import "./partials/mixins.scss";
 @import "./partials/main.scss";
 
 body, html{
-    background-color: $background;
+    background-color: var(--background);
     margin: 0;
     padding: 0;
 }

@@ -2,7 +2,7 @@ import questions from "../models/questions.js";
 import { compareArrays, displayArray } from "./arrayManipulation.js";
 
 export const correct = (index) => {
-  const answers = document.querySelectorAll("input:checked");
+  const answers = document.querySelectorAll("input.alternative:checked");
   const arrayAnswers = [];
   answers.forEach((answer) => arrayAnswers.push(Number(answer.value)));
   return compareArrays(arrayAnswers, questions[index].answers) ? questions[index].iscorrect = true : questions[index].iscorrect = false;

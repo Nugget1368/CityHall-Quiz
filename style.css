@@ -1,3 +1,57 @@
+body[theme=default] {
+  --background: #f7f7f7;
+  --background-light: #fff;
+  --color-1: #006ebf;
+  --color-1-light: #5bb0ff;
+  --color-1-lighter: #badeff;
+  --color-1-dark: #075b97;
+  --color-2: #c29409;
+  --color-2-light: #ffeaad;
+  --color-2-dark: #b48908;
+  --gray: #d8d8d8;
+  --gray-light: #ebebeb;
+  --gray-dark: #bdbdbd;
+  --red: #b61717;
+  --red-light: #faaeae;
+  --red-lighter: #fcd6d6;
+  --red-light-dark: #f79292;
+  --red-dark: #860606;
+  --yellow: #ff0;
+  --yellow-light: #ffeaad;
+  --yellow-dark: #c29409;
+  --green: #0d8d08;
+  --green-light: #d0ffce;
+  --green-dark: #056601;
+  --text-color: #000;
+}
+
+body[theme=dark] {
+  --background: #1b1b1b;
+  --background-light: #333333;
+  --color-1: #4fcfc9;
+  --color-1-light: #7beae4;
+  --color-1-lighter: #1b5248;
+  --color-1-dark: #017670;
+  --color-2: #a70257;
+  --color-2-light: #7a0943;
+  --color-2-dark: #ce6099;
+  --gray: #303030;
+  --gray-light: #353535;
+  --gray-dark: #585858;
+  --red: #7c1515;
+  --red-light: #5e2020;
+  --red-lighter: #522f2f;
+  --red-light-dark: #7a3636;
+  --red-dark: #da3d3d;
+  --yellow: #ff0;
+  --yellow-light: #665010;
+  --yellow-dark: #dec988;
+  --green: #235221;
+  --green-light: #163114;
+  --green-dark: #a1d29f;
+  --text-color: #fff;
+}
+
 main {
   display: flex;
   flex-flow: column;
@@ -5,7 +59,8 @@ main {
   align-items: center;
   box-sizing: border-box;
   padding: 1rem;
-  background-color: #f7f7f7;
+  background-color: var(--background);
+  color: var(--text-color);
 }
 @media screen and (min-width: 800px) {
   main {
@@ -26,6 +81,35 @@ main .btn-container {
     align-items: stretch;
   }
 }
+main .circle {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--gray-dark);
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+main .circle#theme-mode > * {
+  cursor: pointer;
+}
+main .circle#theme-mode:hover {
+  background-color: var(--gray-dark);
+}
+main .circle#theme-mode:active {
+  box-shadow: inset 2px 2px #fff, inset -2px -2px #fff, inset -2px 2px #fff, inset 2px -2px #fff;
+}
+main .circle#theme-mode input[type=checkbox] {
+  display: none;
+}
+main .circle#theme-mode:has(> input[type=checkbox]:checked) label:nth-last-child(1) {
+  display: none;
+}
+main .circle#theme-mode:has(> input[type=checkbox]:not(:checked)) label:nth-last-child(2) {
+  display: none;
+}
 main .accordion li {
   display: flex;
   flex-flow: column;
@@ -34,17 +118,17 @@ main .accordion li {
   margin: 0;
   padding: 0;
   text-align: left;
-  background-color: #f7f7f7;
-  box-shadow: 2px 2px #ebebeb, -2px -2px #ebebeb, -2px 2px #ebebeb, 2px -2px #ebebeb;
+  background-color: var(--gray-light);
+  box-shadow: 2px 2px var(--gray-light), -2px -2px var(--gray-light), -2px 2px var(--gray-light), 2px -2px var(--gray-light);
 }
 main .accordion li:hover {
-  background-color: #ebebeb;
+  background-color: var(--gray-light);
 }
 main .accordion li label {
   box-sizing: border-box;
-  box-shadow: 2px 2px #ebebeb, -2px -2px #ebebeb, -2px 2px #ebebeb, 2px -2px #ebebeb;
+  box-shadow: 2px 2px var(--gray-light), -2px -2px var(--gray-light), -2px 2px var(--gray-light), 2px -2px var(--gray-light);
   width: 100%;
-  background-color: #f7f7f7;
+  background-color: var(--background);
   padding: 10px;
 }
 main .accordion li label ~ * {
@@ -53,22 +137,22 @@ main .accordion li label ~ * {
   padding: 10px;
 }
 main .accordion li label:hover {
-  background-color: #badeff;
+  background-color: var(--color-1-lighter);
 }
 main .accordion li.incorrect {
-  background-color: #fcd6d6;
+  background-color: var(--red-lighter);
 }
 main .accordion li.incorrect label {
-  background-color: #faaeae;
+  background-color: var(--red-light);
 }
 main .accordion li.incorrect label:hover {
-  background-color: #f79292;
+  background-color: var(--red-light-dark);
 }
 main .accordion li.incorrect label.active {
-  background-color: #f79292;
+  background-color: var(--red-light-dark);
 }
 main .accordion .active {
-  background-color: #badeff;
+  background-color: var(--color-1-lighter);
 }
 main .accordion .active ~ * {
   display: flex;
@@ -85,7 +169,7 @@ main article {
   padding: 1rem;
   margin: 1rem;
   width: 100%;
-  background-color: #fff;
+  background-color: var(--background-light);
   min-width: 200px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
@@ -94,6 +178,12 @@ main article {
     width: 50%;
     padding: 2rem;
   }
+}
+main article section header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
 }
 main article > * {
   margin: 5px 0px;
@@ -114,60 +204,60 @@ main article ul li {
   padding: 5px 0px;
 }
 main article ul li:hover {
-  background-color: #ffeaad;
+  background-color: var(--color-2-light);
 }
 main article ul li:has(> input:checked) {
-  background-color: #badeff;
+  background-color: var(--color-1-lighter);
 }
 main article button {
   flex: 1;
   flex-grow: 1;
   border-radius: 5px;
   padding: 4px 7px;
-  border: 2px solid #006ebf;
+  border: 2px solid var(--color-1);
   margin: 2px;
+  color: var(--text-color);
 }
 main article button:active {
   box-shadow: inset 2px 2px #fff, inset -2px -2px #fff, inset -2px 2px #fff, inset 2px -2px #fff;
 }
 main article button.primary-btn {
-  color: #fff;
-  background-color: #006ebf;
-  border-color: #075b97;
+  color: var(--background-light);
+  background-color: var(--color-1);
+  border-color: var(--color-1-dark);
 }
 main article button.primary-btn:hover {
-  background-color: #5bb0ff;
+  background-color: var(--color-1-light);
 }
 main article button.primary-btn:active {
-  background-color: #075b97;
+  background-color: var(--color-1-dark);
   transform: scale(0.92);
 }
 main article button.secondary-btn {
-  color: #075b97;
-  background-color: #fff;
-  border-color: #075b97;
+  background-color: var(--background-light);
+  border-color: var(--color-1-dark);
 }
 main article button.secondary-btn:hover {
-  background-color: #badeff;
+  background-color: var(--color-1-lighter);
 }
 main article button.secondary-btn:active {
-  background-color: #5bb0ff;
+  background-color: var(--color-1-light);
   transform: scale(0.92);
 }
 main article aside.green {
   display: flex;
-  background-color: #d0ffce;
-  border-color: #0d8d08;
+  background-color: var(--green-light);
+  border-color: var(--green);
 }
 main article aside.yellow {
   display: flex;
-  background-color: #ffeaad;
-  border-color: #c29409;
+  background-color: var(--yellow-light);
+  border-color: var(--yellow-dark);
 }
 main article aside.red {
   display: flex;
-  background-color: #faaeae;
-  border-color: #b61717;
+  background-color: var(--red-light);
+  border-color: var(--red);
 }
 main article aside {
   display: none;
@@ -188,7 +278,7 @@ main .hide {
 }
 
 body, html {
-  background-color: #f7f7f7;
+  background-color: var(--background);
   margin: 0;
   padding: 0;
 }
