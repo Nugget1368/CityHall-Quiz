@@ -12,18 +12,21 @@
     />
     <link rel="stylesheet" href="style.css" />
     <!-- Glöm inte defer <3 -->
-    <script src="./builders/questionBuilder.js" type="module"></script>
-    <script src="./services/correct-answer.js" type="module"></script>
+    <!-- <script src="./builders/questionBuilder.js" type="module"></script> -->
+    <!-- <script src="./services/correct-answer.js" type="module"></script> -->
     <script src="main.js" type="module"></script>
     <title>City Hall Quiz</title>
   </head>
-  <body>
+  <body theme="default">
     <header></header>
     <main>
       <article>
         <section>
           <header>
             <h2>Fråga #X</h2>
+            <div>
+              <input type="checkbox" name="dark-mode" id="dark-mode">
+            </div>
           </header>
           <p class="content"></p>
           <ul class="alternatives"></ul>

@@ -6,6 +6,7 @@ import {
   hideDescription,
 } from "./services/correct-answer.js";
 import buildResult from "./builders/resultBuilder.js";
+import switchMode from "./services/darkMode.js";
 
 let questionIndex = 0;
 let playerScore = 0;
@@ -38,3 +39,6 @@ answerBtn.addEventListener("click", () => {
   }
   showDescription(questionIndex, isCorrect);
 });
+
+let darkModeBox = document.querySelector("input#dark-mode");
+darkModeBox.addEventListener("change", switchMode);
