@@ -41,4 +41,4 @@ answerBtn.addEventListener("click", () => {
 });
 
 let darkModeBox = document.querySelector("input#dark-mode");
-darkModeBox.addEventListener("change", switchMode);
+darkModeBox.addEventListener("change", () => switchMode("dark"));
