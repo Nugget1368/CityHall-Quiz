@@ -10,10 +10,12 @@
       type="image/png"
       sizes="16x16"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
     <link rel="stylesheet" href="style.css" />
     <!-- Glöm inte defer <3 -->
-    <!-- <script src="./builders/questionBuilder.js" type="module"></script> -->
-    <!-- <script src="./services/correct-answer.js" type="module"></script> -->
     <script src="main.js" type="module"></script>
     <title>City Hall Quiz</title>
   </head>
@@ -24,8 +26,10 @@
         <section>
           <header>
             <h2>Fråga #X</h2>
-            <div>
-              <input type="checkbox" name="dark-mode" id="dark-mode">
+            <div id="theme-mode" class="circle">
+              <input type="checkbox" name="dark-mode" id="dark-mode" />
+              <label for="dark-mode" class="material-symbols-outlined">light_mode</label>
+              <label for="dark-mode" class="material-symbols-outlined">dark_mode</label>
             </div>
           </header>
           <p class="content"></p>

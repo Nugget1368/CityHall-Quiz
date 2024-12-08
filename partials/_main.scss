@@ -13,6 +13,34 @@ main {
       @include flex(row wrap);
     }
   }
+  .circle{
+    @include flex(row, center, center);
+    border: 2px solid var(--gray-dark);
+    width: fit-content;
+    border-radius: 50%;
+    padding: .2rem;
+  }
+  .circle#theme-mode{
+    >*{
+      cursor: pointer;
+    }
+    &:hover{
+      background-color: var(--gray-dark);
+    }
+    &:active{
+      box-shadow: inset 2px 2px #fff, inset -2px -2px #fff,
+      inset -2px 2px #fff, inset 2px -2px #fff;
+    }
+    input[type="checkbox"]{
+       display: none;
+    }
+  }
+  .circle#theme-mode:has(>input[type="checkbox"]:checked) label:nth-last-child(1){
+    display: none;
+  }
+  .circle#theme-mode:has(>input[type="checkbox"]:not(:checked)) label:nth-last-child(2){
+    display: none;
+  }
   .accordion {
     li {
       @include flex(column, flex-start, flex-start);
@@ -78,6 +106,11 @@ main {
     background-color: var(--background-light);
     min-width: 200px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    section{
+      header{
+        @include flex($justify:space-between);
+      }
+    }
     > * {
       margin: 5px 0px;
     }
@@ -102,7 +135,6 @@ main {
     button {
       flex: 1;
       flex-grow: 1;
-      // min-width: 180px;
       border-radius: 5px;
       padding: 4px 7px;
       border: 2px solid var(--color-1);
