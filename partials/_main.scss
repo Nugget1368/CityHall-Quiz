@@ -6,6 +6,7 @@ main {
   box-sizing: border-box;
   padding: 1rem;
   background-color: var(--background);
+  color: var(--text-color);
   .btn-container {
     @include flex(column);
     @include desktop() {
