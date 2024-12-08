@@ -8,11 +8,13 @@ import {
 import buildResult from "./builders/resultBuilder.js";
 import switchMode from "./services/darkMode.js";
 
+if(localStorage.getItem("theme")){
+  switchMode(localStorage.getItem("theme"));
+}
 let questionIndex = 0;
 let playerScore = 0;
-let questionsCopy = [...questions]
-console.log(questionsCopy);
- buildQuestion(questionIndex);
+let questionsCopy = [...questions];
+buildQuestion(questionIndex);
 
 //Next question
 let nextBtn = document.querySelector("button#next-question");
@@ -20,7 +22,7 @@ nextBtn.addEventListener("click", () => {
   hideDescription();
   nextBtn.disabled = true;
   answerBtn.disabled = false;
-  if (questionIndex < questionsCopy.length -1) {
+  if (questionIndex < questionsCopy.length - 1) {
     questionIndex++;
     buildQuestion(questionIndex);
   } else {

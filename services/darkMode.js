@@ -3,9 +3,11 @@ const switchMode = (mode) => {
   console.log(body.getAttribute("theme"));
   if(body.getAttribute("theme") != mode){
     body.setAttribute("theme", mode);
-  }
-  else{
+    localStorage.setItem("theme", mode);
+}
+else{
     body.setAttribute("theme", "default");
+    localStorage.setItem("theme", "default");
   }
 };
 
