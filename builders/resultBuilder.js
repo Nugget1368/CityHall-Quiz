@@ -10,7 +10,9 @@ const buildResult = (playerScore, questionsArr) => {
   const p = document.querySelector("article section p.content");
   const description = document.querySelector("article aside p.description");
   const scorePercentage = (playerScore / questionsArr.length) * 100;
+  let primaryBtns = document.querySelector("article footer .btn-container");
   articleResult.style.display = "flex";
+  primaryBtns.remove();
 
   ul.innerHTML = "";
   h2.innerText = "Resultat";
