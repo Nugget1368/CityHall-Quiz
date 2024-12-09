@@ -2,44 +2,40 @@ main {
   @include flex(column, flex-start, center);
   @include desktop() {
     padding: 2rem;
+    background-color: var(--background);
   }
   box-sizing: border-box;
-  padding: 1rem;
-  background-color: var(--background);
+  padding: 0;
+  background-color: var(--background-light);
   color: var(--text-color);
-  .btn-container {
-    @include flex(column);
-    @include desktop() {
-      @include flex(row wrap);
+  .circle#theme-mode {
+    > * {
+      cursor: pointer;
+    }
+    &:hover {
+      background-color: var(--gray-dark);
+    }
+    &:active {
+      @include boxShadowInset();
+    }
+    input[type="checkbox"] {
+      display: none;
     }
   }
-  .circle{
+  .circle#theme-mode:has(> input[type="checkbox"]:checked)
+    label:nth-last-child(1) {
+    display: none;
+  }
+  .circle#theme-mode:has(> input[type="checkbox"]:not(:checked))
+    label:nth-last-child(2) {
+    display: none;
+  }
+  .circle {
     @include flex(row, center, center);
     border: 2px solid var(--gray-dark);
     width: fit-content;
     border-radius: 50%;
-    padding: .2rem;
-  }
-  .circle#theme-mode{
-    >*{
-      cursor: pointer;
-    }
-    &:hover{
-      background-color: var(--gray-dark);
-    }
-    &:active{
-      box-shadow: inset 2px 2px #fff, inset -2px -2px #fff,
-      inset -2px 2px #fff, inset 2px -2px #fff;
-    }
-    input[type="checkbox"]{
-       display: none;
-    }
-  }
-  .circle#theme-mode:has(>input[type="checkbox"]:checked) label:nth-last-child(1){
-    display: none;
-  }
-  .circle#theme-mode:has(>input[type="checkbox"]:not(:checked)) label:nth-last-child(2){
-    display: none;
+    padding: 0.2rem;
   }
   .accordion {
     li {
@@ -48,16 +44,31 @@ main {
       padding: 0;
       text-align: left;
       background-color: var(--gray-light);
-      box-shadow: 2px 2px var(--gray-light), -2px -2px var(--gray-light),
-        -2px 2px var(--gray-light), 2px -2px var(--gray-light);
+      @include boxShadow();
       &:hover {
         background-color: var(--gray-light);
       }
+      li.incorrect {
+        background-color: var(--red-lighter);
+        label {
+          background-color: var(--red-light);
+          &:hover {
+            background-color: var(--red-light-dark);
+          }
+          &.active {
+            background-color: var(--red-light-dark);
+          }
+        }
+      }
+      .active {
+        background-color: var(--color-1-lighter);
+      }
+      .active ~ * {
+        display: flex;
+      }
       label {
         box-sizing: border-box;
-        box-shadow: 2px 2px var(--gray-light), -2px -2px var(--gray-light),
-          -2px 2px var(--gray-light), 2px -2px var(--gray-light);
-        width: 100%;
+        @include boxShadow();
         background-color: var(--background);
         padding: 10px;
         & ~ * {
@@ -70,24 +81,14 @@ main {
         }
       }
     }
-    li.incorrect {
-      background-color: var(--red-lighter);
-      label {
-        background-color: var(--red-light);
-        &:hover {
-          background-color: var(--red-light-dark);
-        }
-        &.active {
-          background-color: var(--red-light-dark);
-        }
-      }
-    }
-
-    .active {
-      background-color: var(--color-1-lighter);
-    }
-    .active ~ * {
-      display: flex;
+  }
+  .hide {
+    display: none;
+  }
+  .btn-container {
+    @include flex(column);
+    @include desktop() {
+      @include flex(row wrap);
     }
   }
   * {
@@ -96,55 +97,16 @@ main {
   article {
     @include flex(column);
     @include desktop() {
-      width: 50%;
-      padding: 2rem;
+      width: 60%;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+      margin: 1rem;
     }
+    margin-bottom: 1rem;
     box-sizing: border-box;
-    padding: 1rem;
-    margin: 1rem;
+    padding: 2rem;
     width: 100%;
     background-color: var(--background-light);
     min-width: 200px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-    section{
-      header{
-        @include flex($justify:space-between);
-      }
-    }
-    > * {
-      margin: 5px 0px;
-    }
-    h2 {
-      margin: 0;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-      li {
-        @include flex(row, flex-start, flex-start);
-        margin: 5px 0px;
-        padding: 5px 0px;
-        &:hover {
-          background-color: var(--color-2-light);
-        }
-        &:has(> input:checked) {
-          background-color: var(--color-1-lighter);
-        }
-      }
-    }
-    button {
-      flex: 1;
-      flex-grow: 1;
-      border-radius: 5px;
-      padding: 4px 7px;
-      border: 2px solid var(--color-1);
-      margin: 2px;
-      color: var(--text-color);
-      &:active {
-        box-shadow: inset 2px 2px #fff, inset -2px -2px #fff,
-          inset -2px 2px #fff, inset 2px -2px #fff;
-      }
-    }
     button.primary-btn {
       color: var(--background-light);
       background-color: var(--color-1);
@@ -168,6 +130,19 @@ main {
         transform: scale(0.92);
       }
     }
+    button {
+      flex: 1;
+      flex-grow: 1;
+      border-radius: 5px;
+      padding: 4px 7px;
+      border: 2px solid var(--color-1);
+      margin: 2px;
+      color: var(--text-color);
+      &:active {
+        @include boxShadowInset();
+      }
+    }
+
     aside.green {
       display: flex;
       background-color: var(--green-light);
@@ -194,11 +169,34 @@ main {
         margin: 5px;
       }
     }
+    section {
+      header {
+        @include flex($justify: space-between);
+      }
+    }
+    h2 {
+      margin: 0;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      li {
+        @include flex(row, flex-start, flex-start);
+        margin: 5px 0px;
+        padding: 5px 0px;
+        label{
+          width: 100%;
+        }
+        &:hover {
+          background-color: var(--color-2-light);
+        }
+        &:has(> input:checked) {
+          background-color: var(--color-1-lighter);
+        }
+      }
+    }
   }
-  article.result {
-    display: none;
-  }
-  .hide {
-    display: none;
+  footer {
+    margin-top: 2rem;
   }
 }

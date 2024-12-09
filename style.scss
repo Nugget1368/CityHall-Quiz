@@ -10,3 +10,18 @@ body, html{
 main{
     min-height: 100vh;
 }
+
+header{
+    margin-bottom: 15px;
+}
+
+p{
+     margin: 5px 0px;
+}
+
+label, button, input[type="checkbox"], input[type="radio"]{
+    cursor: pointer;
+  }
+  p, h1, h2, h3{
+    cursor:default;
+  }

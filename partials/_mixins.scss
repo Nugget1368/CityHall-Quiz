@@ -1,12 +1,22 @@
-@mixin flex($direction: row wrap, $justify: center, $align: stretch){
-    display: flex;
-    flex-flow: $direction;
-    justify-content: $justify;
-    align-items: $align;
+@mixin flex($direction: row wrap, $justify: center, $align: stretch) {
+  display: flex;
+  flex-flow: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }
 
-@mixin desktop(){
-    @media screen and (min-width: 800px){
-        @content;
-    }
+@mixin boxShadow() {
+  box-shadow: 2px 2px var(--gray-light), -2px -2px var(--gray-light),
+    -2px 2px var(--gray-light), 2px -2px var(--gray-light);
+}
+
+@mixin boxShadowInset() {
+  box-shadow: inset 2px 2px #fff, inset -2px -2px #fff, inset -2px 2px #fff,
+    inset 2px -2px #fff;
+}
+
+@mixin desktop() {
+  @media screen and (min-width: 800px) {
+    @content;
+  }
 }
