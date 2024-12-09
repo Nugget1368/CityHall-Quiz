@@ -9,7 +9,7 @@ const buildResult = (playerScore, questionsArr) => {
   const h3 = document.querySelector("article aside header h3");
   const p = document.querySelector("article section p.content");
   const description = document.querySelector("article aside p.description");
-  const scorePercentage = (playerScore / questionsArr.length) * 100;
+  const scorePercentage = Math.round((playerScore / questionsArr.length) * 100);
   let primaryBtns = document.querySelector("article footer .btn-container");
   articleResult.classList.remove("hide");
   primaryBtns.remove();

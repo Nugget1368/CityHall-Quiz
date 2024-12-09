@@ -38,6 +38,21 @@ main {
     padding: 0.2rem;
   }
   .accordion {
+    li.incorrect {
+      background-color: var(--red-lighter);
+      &:hover{
+        background-color: var(--red-lighter);        
+      }
+      label {
+        background-color: var(--red-light);
+        &:hover {
+          background-color: var(--red-light-dark);
+        }
+        &.active {
+          background-color: var(--red-light-dark);
+        }
+      }
+    }
     li {
       @include flex(column, flex-start, flex-start);
       margin: 0;
@@ -48,18 +63,7 @@ main {
       &:hover {
         background-color: var(--gray-light);
       }
-      li.incorrect {
-        background-color: var(--red-lighter);
-        label {
-          background-color: var(--red-light);
-          &:hover {
-            background-color: var(--red-light-dark);
-          }
-          &.active {
-            background-color: var(--red-light-dark);
-          }
-        }
-      }
+      
       .active {
         background-color: var(--color-1-lighter);
       }

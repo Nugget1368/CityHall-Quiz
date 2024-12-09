@@ -1,10 +1,47 @@
 const questions = [
   {
-    question: `Den 10:e December varje år äger Stadshusets mest kända evenemang rum, Nobelfesten. \n\nIdag hålls Nobelmiddagen i Blå Hallen men stämmer det att den tidigare ägt rum i Gyllene Salen?`,
+    question: `Vilket år påbörjades byggnationen av Stockhoms Stadshus?`,
+    alternatives: ["År. 1723", "År. 1809", "År. 1896", "År. 1911"],
+    answers: [3],
+    description: [`Byggnationen av Stockholms Stadshus påbörjades 1911 och det mycket påkostade bygget stog färdigt 1923, och öppnades upp för folket samma år.`],
+    iscorrect: false,
+  },
+  {
+    question: `Stämmer det att Stadshuset är byggt på den mark där den s.k Eldkvarn tidigare stog innan den brann ner?`,
+    alternatives: ["Ja, det stämmer", "Nej, det är inte alls sant"],
+    answers: [0],
+    description: [`Stadshuset är byggt på Eldkvarnstomten som platsen faktiskt heter. På tomten stog det som i folkmun kallas för Eldkvarn, en ångkvarn som avsåg vattenånga. 1878 väcktes en kraftig brand i kvarnen, men kvarnen totalförstördes inte, utan var i bruk fram till 1906 då man började riva den för att få plats med ett visst Stadshus.`],
+    iscorrect: false,
+  },
+  {
+    question: `Vad heter arkitekten som har ritat Stockhoms Stadshus?`,
+    alternatives: ["Ruben Västberg", "Ragnar Östberg", "Roger Nordman", "Robert Söderman"],
+    answers: [1],
+    description: [`1902 hölls en arkitekt-tävling som Ragnar Östberg vann, och han belönades med den stora äran att rita Stockholm Stadshus.`],
+    iscorrect: false,
+  },
+  {
+    question: `Den 10:e December varje år äger Stadshusets mest kända evenemang rum, Nobelfesten. Idag hålls Nobelmiddagen i Blå Hallen men stämmer det att den tidigare ägt rum i Gyllene Salen?`,
     alternatives: ["Sant", "Falskt"],
     answers: [0],
     description: [
       `Det var 1974 som antalet gäster till Nobelfesten vuxit så pass mycket att beslutet togs att permanent flytta middagen ner från Gyllene Salen till Blå Hallen. Det var dock inte första gången middagen flyttats till Blå Hallen utan där har den även ägt rum bl.a under 50-års jubileumet 1951.`,
+    ],
+    iscorrect: false,
+  },
+  {
+    question: `En vanlig missuppfattning är att nobelpriserna delas ut i Stocholms Stadshus under Nobelfesten, men det stämmer inte alls! Alla nobelpris förutom fredspriset delas ut i konserthuset, men det har det inte alltid gjort. \n\nPå vilka fler platser har Nobelpriset delats ut?`,
+    alternatives: [
+      `Globen`,
+      `Stockholmsmässan i Älvsjö`,
+      `Kungliga Tekniska Högskolan i Stockholm`,
+      `Grand Hôtel`,
+    ],
+    answers: [0, 1, 3],
+    description: [
+      `Den första Nobelcermonin ägde rum 1901 på Grand Hôtel i Stockholm.`,
+      `1972 var Konserthuset stängt för renovering och Nobelpriset delades ut på Stockholmsmässan i Älvsjö, på den tiden hette det S:t Eriksmässan.`,
+      `1991 firade man 90-årsjubileum i Globen.`,
     ],
     iscorrect: false,
   },
@@ -37,21 +74,47 @@ const questions = [
     iscorrect: false,
   },
   {
-    question: `En vanlig missuppfattning är att nobelpriserna delas ut i Stocholms Stadshus under Nobelfesten, men det stämmer inte alls! Alla nobelpris förutom fredspriset delas ut i konserthuset, men det har det inte alltid gjort. \n\nPå vilka fler platser har Nobelpriset delats ut?`,
-    alternatives: [
-      `Globen`,
-      `Stockholmsmässan i Älvsjö`,
-      `Kungliga Tekniska Högskolan i Stockholm`,
-      `Grand Hôtel`,
-    ],
-    answers: [0, 1, 3],
-    description: [
-      `Den första Nobelcermonin ägde rum 1901 på Grand Hôtel i Stockholm.`,
-      `1972 var Konserthuset stängt för renovering och Nobelpriset delades ut på Stockholmsmässan i Älvsjö, på den tiden hette det S:t Eriksmässan.`,
-      `1991 firade man 90-årsjubileum i Globen.`,
-    ],
+    question: `Arkitekten var starkt influerad av olika historiska arkitetur-stilar, och det finns tydliga spår av detta i alla husets rum. Vilka av följande stilar var arkitekten inpirerad av?`,
+    alternatives: ["National Romantiken", "Gotisk stil", "italiensk renässans", "Svensk Barock"],
+    answers: [0, 2, 3],
+    description: [`Den dominerande stilen är nationalromantiken som återfinns i mycket av Stadshusets konst och material.`, `Man kan se tydliga inlslag av italiensk renässans i bl.a Blå Hallen där man kan dra tydliga likheter med en itlaiensk innergård.`, `Man kan se hur arkitekten var mycket inspirerad av svensk barock och hur ett rum som är lågt i tak ofta följs av ett rum som är högt i tak, eller hur ett mörkt rum ofta följs av ett betydligt ljusare rum.`],
     iscorrect: false,
   },
+  // {
+  //   question: ``,
+  //   alternatives: ["", ""],
+  //   answers: [0],
+  //   description: [``],
+  //   iscorrect: false,
+  // },
+  // {
+  //   question: ``,
+  //   alternatives: ["", ""],
+  //   answers: [0],
+  //   description: [``],
+  //   iscorrect: false,
+  // },
+  // {
+  //   question: ``,
+  //   alternatives: ["", ""],
+  //   answers: [0],
+  //   description: [``],
+  //   iscorrect: false,
+  // },
+  // {
+  //   question: ``,
+  //   alternatives: ["", ""],
+  //   answers: [0],
+  //   description: [``],
+  //   iscorrect: false,
+  // },
+  // {
+  //   question: ``,
+  //   alternatives: ["", ""],
+  //   answers: [0],
+  //   description: [``],
+  //   iscorrect: false,
+  // },
 ];
 
 export default questions;
