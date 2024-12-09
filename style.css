@@ -68,20 +68,6 @@ main {
     background-color: var(--background);
   }
 }
-main .btn-container {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: stretch;
-}
-@media screen and (min-width: 800px) {
-  main .btn-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: stretch;
-  }
-}
 main .circle#theme-mode > * {
   cursor: pointer;
 }
@@ -157,6 +143,23 @@ main .accordion li label ~ * {
 }
 main .accordion li label:hover {
   background-color: var(--color-1-lighter);
+}
+main .hide {
+  display: none;
+}
+main .btn-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: stretch;
+}
+@media screen and (min-width: 800px) {
+  main .btn-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
 }
 main * {
   transition: 0.2s;
@@ -270,9 +273,6 @@ main article ul li:has(> input:checked) {
 }
 main footer {
   margin-top: 2rem;
-}
-main .hide {
-  display: none;
 }
 
 body, html {
