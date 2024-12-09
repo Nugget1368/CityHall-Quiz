@@ -97,6 +97,21 @@ main .circle {
   border-radius: 50%;
   padding: 0.2rem;
 }
+main .accordion li.incorrect {
+  background-color: var(--red-lighter);
+}
+main .accordion li.incorrect:hover {
+  background-color: var(--red-lighter);
+}
+main .accordion li.incorrect label {
+  background-color: var(--red-light);
+}
+main .accordion li.incorrect label:hover {
+  background-color: var(--red-light-dark);
+}
+main .accordion li.incorrect label.active {
+  background-color: var(--red-light-dark);
+}
 main .accordion li {
   display: flex;
   flex-flow: column;
@@ -110,18 +125,6 @@ main .accordion li {
 }
 main .accordion li:hover {
   background-color: var(--gray-light);
-}
-main .accordion li li.incorrect {
-  background-color: var(--red-lighter);
-}
-main .accordion li li.incorrect label {
-  background-color: var(--red-light);
-}
-main .accordion li li.incorrect label:hover {
-  background-color: var(--red-light-dark);
-}
-main .accordion li li.incorrect label.active {
-  background-color: var(--red-light-dark);
 }
 main .accordion li .active {
   background-color: var(--color-1-lighter);
@@ -286,8 +289,7 @@ body, html {
 main {
   min-height: 100vh;
 }
-
-header {
+main header {
   margin-bottom: 15px;
 }
 
