@@ -289,8 +289,7 @@ body, html {
 main {
   min-height: 100vh;
 }
-
-header {
+main header {
   margin-bottom: 15px;
 }
 

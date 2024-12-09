@@ -46,7 +46,7 @@ const questions = [
     iscorrect: false,
   },
   {
-    question: `Blå Hallen är ett av Stadshusets mest berömda rum. Den har har en yta på 1500 kvadratmeter och är starkt influerad av italensk renesans vilket tydligt speglas i bl.a pelargången som omringar hallen. \n\nMen hur kommer det sig att Blå Hallen kallas för just Blå Hallen, även fast att den inte är särskilt blå alls?`,
+    question: `Blå Hallen är ett av Stadshusets mest berömda rum. Den har har en yta på 1500 kvadratmeter och är starkt influerad av italiensk renässans vilket tydligt speglas i bl.a pelargången som omringar hallen. \n\nMen hur kommer det sig att Blå Hallen kallas för just Blå Hallen, även fast att den inte är särskilt blå alls?`,
     alternatives: [
       `Blå var arkitekten Ragnar Östbergs favoritfärg och han ville därför att rummet skulle spegla detta och ha den färgen samt döpas till Blå Hallen, men han fick avslag av regeringen som tyckte detta var alltför kontroversiellt.`,
       `Blå Hallens väggar var från början täckta i sametsgardiner utformade efter svenska flaggans färger, gul och blå. Eftersom textiler slits snabbare än andra material har dessa gardiner tyvärr tillslut behövts tas ner och man har ännu inte lyckats återskapa några ersättare för Blå Hallens enorma väggar.`,
@@ -57,6 +57,20 @@ const questions = [
     description: [
       `När arkitekten väl hade ändrat sin uppfattning om Blå Hallens utseende var det försent att försöka ändra på namnet. Blå Hallens namn stog redan i alla projektets ritningar, och det hade t.o.m skrivits om Blå Hallen i tidningarna, att försöka ändra på Blå Hallens namn nu ansågs vara på gränsen till omöjligt.`,
     ],
+    iscorrect: false,
+  },
+  {
+    question: `Trappstegen i Blå Hallen-Trappen har specifika dimensioner och är lägre än vanliga trappsteg. Hur kommer det sig att den stora trappen i mitten av Blå Hallen är designad som den är?`,
+    alternatives: ["De som arbetade under bygget läste fel på ritningarna för trappen, och som ett resultat blev trappstegen mycket lägre och trappan mycket längre", "Trappen är inspirerad av en trapp i det gamla slottet Tre Kronor, vars trappsteg är lägre än vanliga trappsteg", "Det var väldigt typiskt för Nationalromantiken att ha låga trappsteg", "Trappan är designad att vara så bekväm som möjligt att gå i"],
+    answers: [3],
+    description: [`Under byggnationen av Stadshuset, byggde Ragnar flertalet trätrappor. Därefter bad han sin fru och hennes vän att sätta på sig en klänning med högklackat, och gå upp och ner i trapporna för att därefter berätta för Ragnar vilken trappa de upplevde var den lättaste att gå i.`],
+    iscorrect: false,
+  },
+  {
+    question: `Om man tittar noga på Blå Hallens långa vägg, mittemot den stora trappan och Gyllene salen, så kan man mellan det 2:a och 3:e fönstret se en stjärna inristad i teglet. Hur kommer det sig att den stjärnan sitter där?`,
+    alternatives: ["Stjärnan är en hyllning till Ragnar Östbergs bortgågna hund, som sägs vaka över Blå Hallen och allt som äger rum där.", "Arkitekten var mycket förtjust den vackra natthimlen och hur stjärnor och planeter är grupperade på ett sätt som människan inte riktigt kunde förstå sig på. Han tyckte därför att det var mycket vackert att i stadshusets rum ha diverse himlakroppar.", "Stjärnan ristades in som en protest av arbetarna på bygget, men eftersom man inte kan se stjärnan om man inte tittar väldigt noga på väggen så påträffades inte denna protest förnst långt efter bygget var klart.", "När hedersgäster under bl.a Nobelfesten går ner för den stora trappen kan de fästa blicken på stjärnan, och detta ska hjälpa de att bibehålla en god hållning."],
+    answers: [1, 3],
+    description: [`Det kan kännas mycket nervöst för såväl kungligheter som nobelpristagare att gå ner för den stora trappen i Blå Hallen, med tusentals människor som beaktar en. Stjärnan sägs därför var till god hjälp för diverse hedersgäster när de går ner för trappan.`],
     iscorrect: false,
   },
   {
@@ -75,11 +89,12 @@ const questions = [
   },
   {
     question: `Arkitekten var starkt influerad av olika historiska arkitetur-stilar, och det finns tydliga spår av detta i alla husets rum. Vilka av följande stilar var arkitekten inpirerad av?`,
-    alternatives: ["National Romantiken", "Gotisk stil", "italiensk renässans", "Svensk Barock"],
+    alternatives: ["National Romantiken", "Gotisk stil", "Italiensk renässans", "Svensk Barock"],
     answers: [0, 2, 3],
     description: [`Den dominerande stilen är nationalromantiken som återfinns i mycket av Stadshusets konst och material.`, `Man kan se tydliga inlslag av italiensk renässans i bl.a Blå Hallen där man kan dra tydliga likheter med en itlaiensk innergård.`, `Man kan se hur arkitekten var mycket inspirerad av svensk barock och hur ett rum som är lågt i tak ofta följs av ett rum som är högt i tak, eller hur ett mörkt rum ofta följs av ett betydligt ljusare rum.`],
     iscorrect: false,
   },
+  //Man kan ha en fråga om någon kung
   // {
   //   question: ``,
   //   alternatives: ["", ""],

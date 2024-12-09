@@ -20,14 +20,20 @@ export const showDescription = (index, isCorrect) => {
   let p = document.querySelector("aside p.description");
   let h3 = document.querySelector("aside header h3");
   p.innerText = "";
-  p.innerText = `${displayArray(questions[index].description)}`;
   if (isCorrect) {
     aside.classList = "green";
     h3.innerText = `Korrekt!`;
   } else {
     aside.classList = "red";
     h3.innerText = `Fel!`;
-    p.innerText = `Rätt Svar: \nAlternativ ${displayArray(
-      questions[index].answers.map((i) => i + 1 + ". " + questions[index].alternatives[i]))}\n\n${displayArray(questions[index].description)}`;
+    p.innerText = "Rätt svar:";
+    let correctAnswers = questions[index].answers.map(
+      (answer) => answer + 1 + ". " + questions[index].alternatives[answer]
+    );
+    correctAnswers.forEach((answer) => {
+      p.innerText += `\nAlternativ: ${answer}\n`;
+    });
+    p.innerText += "\n";
   }
+  p.innerText += `${displayArray(questions[index].description)}`;
 };
