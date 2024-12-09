@@ -82,17 +82,6 @@ main .btn-container {
     align-items: stretch;
   }
 }
-main .circle {
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid var(--gray-dark);
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 50%;
-  padding: 0.2rem;
-}
 main .circle#theme-mode > * {
   cursor: pointer;
 }
@@ -111,6 +100,17 @@ main .circle#theme-mode:has(> input[type=checkbox]:checked) label:nth-last-child
 main .circle#theme-mode:has(> input[type=checkbox]:not(:checked)) label:nth-last-child(2) {
   display: none;
 }
+main .circle {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--gray-dark);
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
 main .accordion li {
   display: flex;
   flex-flow: column;
@@ -124,6 +124,24 @@ main .accordion li {
 }
 main .accordion li:hover {
   background-color: var(--gray-light);
+}
+main .accordion li li.incorrect {
+  background-color: var(--red-lighter);
+}
+main .accordion li li.incorrect label {
+  background-color: var(--red-light);
+}
+main .accordion li li.incorrect label:hover {
+  background-color: var(--red-light-dark);
+}
+main .accordion li li.incorrect label.active {
+  background-color: var(--red-light-dark);
+}
+main .accordion li .active {
+  background-color: var(--color-1-lighter);
+}
+main .accordion li .active ~ * {
+  display: flex;
 }
 main .accordion li label {
   box-sizing: border-box;
@@ -139,24 +157,6 @@ main .accordion li label ~ * {
 }
 main .accordion li label:hover {
   background-color: var(--color-1-lighter);
-}
-main .accordion li.incorrect {
-  background-color: var(--red-lighter);
-}
-main .accordion li.incorrect label {
-  background-color: var(--red-light);
-}
-main .accordion li.incorrect label:hover {
-  background-color: var(--red-light-dark);
-}
-main .accordion li.incorrect label.active {
-  background-color: var(--red-light-dark);
-}
-main .accordion .active {
-  background-color: var(--color-1-lighter);
-}
-main .accordion .active ~ * {
-  display: flex;
 }
 main * {
   transition: 0.2s;
@@ -179,6 +179,67 @@ main article {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
     margin: 1rem;
   }
+}
+main article button.primary-btn {
+  color: var(--background-light);
+  background-color: var(--color-1);
+  border-color: var(--color-1-dark);
+}
+main article button.primary-btn:hover {
+  background-color: var(--color-1-light);
+}
+main article button.primary-btn:active {
+  background-color: var(--color-1-dark);
+  transform: scale(0.92);
+}
+main article button.secondary-btn {
+  background-color: var(--background-light);
+  border-color: var(--color-1-dark);
+}
+main article button.secondary-btn:hover {
+  background-color: var(--color-1-lighter);
+}
+main article button.secondary-btn:active {
+  background-color: var(--color-1-light);
+  transform: scale(0.92);
+}
+main article button {
+  flex: 1;
+  flex-grow: 1;
+  border-radius: 5px;
+  padding: 4px 7px;
+  border: 2px solid var(--color-1);
+  margin: 2px;
+  color: var(--text-color);
+}
+main article button:active {
+  box-shadow: inset 2px 2px #fff, inset -2px -2px #fff, inset -2px 2px #fff, inset 2px -2px #fff;
+}
+main article aside.green {
+  display: flex;
+  background-color: var(--green-light);
+  border-color: var(--green);
+}
+main article aside.yellow {
+  display: flex;
+  background-color: var(--yellow-light);
+  border-color: var(--yellow-dark);
+}
+main article aside.red {
+  display: flex;
+  background-color: var(--red-light);
+  border-color: var(--red);
+}
+main article aside {
+  display: none;
+  border: 2px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px;
+}
+main article aside p,
+main article aside h3 {
+  margin: 5px;
 }
 main article section header {
   display: flex;
@@ -207,69 +268,8 @@ main article ul li:hover {
 main article ul li:has(> input:checked) {
   background-color: var(--color-1-lighter);
 }
-main article button {
-  flex: 1;
-  flex-grow: 1;
-  border-radius: 5px;
-  padding: 4px 7px;
-  border: 2px solid var(--color-1);
-  margin: 2px;
-  color: var(--text-color);
-}
-main article button:active {
-  box-shadow: inset 2px 2px #fff, inset -2px -2px #fff, inset -2px 2px #fff, inset 2px -2px #fff;
-}
-main article button.primary-btn {
-  color: var(--background-light);
-  background-color: var(--color-1);
-  border-color: var(--color-1-dark);
-}
-main article button.primary-btn:hover {
-  background-color: var(--color-1-light);
-}
-main article button.primary-btn:active {
-  background-color: var(--color-1-dark);
-  transform: scale(0.92);
-}
-main article button.secondary-btn {
-  background-color: var(--background-light);
-  border-color: var(--color-1-dark);
-}
-main article button.secondary-btn:hover {
-  background-color: var(--color-1-lighter);
-}
-main article button.secondary-btn:active {
-  background-color: var(--color-1-light);
-  transform: scale(0.92);
-}
-main article aside.green {
-  display: flex;
-  background-color: var(--green-light);
-  border-color: var(--green);
-}
-main article aside.yellow {
-  display: flex;
-  background-color: var(--yellow-light);
-  border-color: var(--yellow-dark);
-}
-main article aside.red {
-  display: flex;
-  background-color: var(--red-light);
-  border-color: var(--red);
-}
-main article aside {
-  display: none;
-  border: 2px solid black;
-  box-sizing: border-box;
-  border-radius: 5px;
-  padding: 10px;
-}
-main article aside p,
-main article aside h3 {
-  margin: 5px;
-}
-main article.result {
-  display: none;
+main footer {
+  margin-top: 2rem;
 }
 main .hide {
   display: none;
