@@ -14,32 +14,33 @@ main {
       @include flex(row wrap);
     }
   }
-  .circle{
+  .circle {
     @include flex(row, center, center);
     border: 2px solid var(--gray-dark);
     width: fit-content;
     border-radius: 50%;
-    padding: .2rem;
+    padding: 0.2rem;
   }
-  .circle#theme-mode{
-    >*{
+  .circle#theme-mode {
+    > * {
       cursor: pointer;
     }
-    &:hover{
+    &:hover {
       background-color: var(--gray-dark);
     }
-    &:active{
-      box-shadow: inset 2px 2px #fff, inset -2px -2px #fff,
-      inset -2px 2px #fff, inset 2px -2px #fff;
+    &:active {
+      @include boxShadowInset();
     }
-    input[type="checkbox"]{
-       display: none;
+    input[type="checkbox"] {
+      display: none;
     }
   }
-  .circle#theme-mode:has(>input[type="checkbox"]:checked) label:nth-last-child(1){
+  .circle#theme-mode:has(> input[type="checkbox"]:checked)
+    label:nth-last-child(1) {
     display: none;
   }
-  .circle#theme-mode:has(>input[type="checkbox"]:not(:checked)) label:nth-last-child(2){
+  .circle#theme-mode:has(> input[type="checkbox"]:not(:checked))
+    label:nth-last-child(2) {
     display: none;
   }
   .accordion {
@@ -49,15 +50,13 @@ main {
       padding: 0;
       text-align: left;
       background-color: var(--gray-light);
-      box-shadow: 2px 2px var(--gray-light), -2px -2px var(--gray-light),
-        -2px 2px var(--gray-light), 2px -2px var(--gray-light);
+      @include boxShadow();
       &:hover {
         background-color: var(--gray-light);
       }
       label {
         box-sizing: border-box;
-        box-shadow: 2px 2px var(--gray-light), -2px -2px var(--gray-light),
-          -2px 2px var(--gray-light), 2px -2px var(--gray-light);
+        @include boxShadow();
         width: 100%;
         background-color: var(--background);
         padding: 10px;
@@ -107,9 +106,9 @@ main {
     width: 100%;
     background-color: var(--background-light);
     min-width: 200px;
-    section{
-      header{
-        @include flex($justify:space-between);
+    section {
+      header {
+        @include flex($justify: space-between);
       }
     }
     h2 {
@@ -139,8 +138,7 @@ main {
       margin: 2px;
       color: var(--text-color);
       &:active {
-        box-shadow: inset 2px 2px #fff, inset -2px -2px #fff,
-          inset -2px 2px #fff, inset 2px -2px #fff;
+        @include boxShadowInset();
       }
     }
     button.primary-btn {
