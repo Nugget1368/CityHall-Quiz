@@ -132,7 +132,6 @@ main .accordion li .active ~ * {
 main .accordion li label {
   box-sizing: border-box;
   box-shadow: 2px 2px var(--gray-light), -2px -2px var(--gray-light), -2px 2px var(--gray-light), 2px -2px var(--gray-light);
-  width: 100%;
   background-color: var(--background);
   padding: 10px;
 }
@@ -265,6 +264,9 @@ main article ul li {
   margin: 5px 0px;
   padding: 5px 0px;
 }
+main article ul li label {
+  width: 100%;
+}
 main article ul li:hover {
   background-color: var(--color-2-light);
 }
@@ -291,4 +293,12 @@ header {
 
 p {
   margin: 5px 0px;
+}
+
+label, button, input[type=checkbox], input[type=radio] {
+  cursor: pointer;
+}
+
+p, h1, h2, h3 {
+  cursor: default;
 }/*# sourceMappingURL=style.css.map */

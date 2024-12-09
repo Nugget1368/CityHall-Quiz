@@ -18,3 +18,10 @@ header{
 p{
      margin: 5px 0px;
 }
+
+label, button, input[type="checkbox"], input[type="radio"]{
+    cursor: pointer;
+  }
+  p, h1, h2, h3{
+    cursor:default;
+  }

@@ -69,7 +69,6 @@ main {
       label {
         box-sizing: border-box;
         @include boxShadow();
-        width: 100%;
         background-color: var(--background);
         padding: 10px;
         & ~ * {
@@ -185,6 +184,9 @@ main {
         @include flex(row, flex-start, flex-start);
         margin: 5px 0px;
         padding: 5px 0px;
+        label{
+          width: 100%;
+        }
         &:hover {
           background-color: var(--color-2-light);
         }
