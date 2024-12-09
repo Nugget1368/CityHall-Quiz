@@ -28,9 +28,6 @@ export const showDescription = (index, isCorrect) => {
     aside.classList = "red";
     h3.innerText = `Fel!`;
     p.innerText = `Rätt Svar: \nAlternativ ${displayArray(
-      questions[index].answers.map(
-        (i) => i + 1 + ". " + questions[index].alternatives[i]
-      )
-    )}\n\n${displayArray(questions[index].description)}`;
+      questions[index].answers.map((i) => i + 1 + ". " + questions[index].alternatives[i]))}\n\n${displayArray(questions[index].description)}`;
   }
 };

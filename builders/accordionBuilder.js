@@ -10,7 +10,6 @@ export const buildAccordionQuestions = (targetSelector, questionsArray) => {
     const paragraphs = [question.question, correctAlternatives];
     buildAccordion(targetSelector, `Fråga #${index + 1}`, paragraphs);
     if(!question.iscorrect){
-        console.log(index);
         markIncorrect(index);
     }
   });
