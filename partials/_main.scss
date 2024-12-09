@@ -2,10 +2,11 @@ main {
   @include flex(column, flex-start, center);
   @include desktop() {
     padding: 2rem;
+    background-color: var(--background);
   }
   box-sizing: border-box;
-  padding: 1rem;
-  background-color: var(--background);
+  padding: 0;
+  background-color: var(--background-light);
   color: var(--text-color);
   .btn-container {
     @include flex(column);
@@ -96,16 +97,16 @@ main {
   article {
     @include flex(column);
     @include desktop() {
-      width: 50%;
-      padding: 2rem;
+      width: 60%;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+      margin: 1rem;
     }
+    margin-bottom: 1rem;
     box-sizing: border-box;
-    padding: 1rem;
-    margin: 1rem;
+    padding: 2rem;
     width: 100%;
     background-color: var(--background-light);
     min-width: 200px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
     section{
       header{
         @include flex($justify:space-between);
