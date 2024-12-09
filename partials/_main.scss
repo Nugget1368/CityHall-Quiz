@@ -112,9 +112,6 @@ main {
         @include flex($justify:space-between);
       }
     }
-    > * {
-      margin: 5px 0px;
-    }
     h2 {
       margin: 0;
     }
