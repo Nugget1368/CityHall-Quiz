@@ -188,11 +188,7 @@ main {
       border: 2px solid black;
       box-sizing: border-box;
       border-radius: 5px;
-      padding: 10px;
-      p,
-      h3 {
-        margin: 5px;
-      }
+      padding: 15px;
     }
     section {
       @include flex(column, $justify: flex-start);
@@ -208,10 +204,11 @@ main {
         img {
           width: 100%;
           object-fit: fill;
+          border: 3px solid var(--gray-dark);
         }
       }
     }
-    h2 {
+    h2, h3 {
       margin: 0;
     }
     ul {

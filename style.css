@@ -267,11 +267,7 @@ main article aside {
   border: 2px solid black;
   box-sizing: border-box;
   border-radius: 5px;
-  padding: 10px;
-}
-main article aside p,
-main article aside h3 {
-  margin: 5px;
+  padding: 15px;
 }
 main article section {
   display: flex;
@@ -299,8 +295,9 @@ main article section figure img {
   width: 100%;
   -o-object-fit: fill;
      object-fit: fill;
+  border: 3px solid var(--gray-dark);
 }
-main article h2 {
+main article h2, main article h3 {
   margin: 0;
 }
 main article ul {
@@ -338,7 +335,7 @@ main {
   min-height: 100vh;
 }
 main header {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 p {
