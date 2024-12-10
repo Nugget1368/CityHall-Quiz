@@ -1,5 +1,5 @@
 import { buildAccordionQuestions } from "./accordionBuilder.js";
-
+import { removeElements } from "../builders/builder.js";
 
 const buildResult = (playerScore, questionsArr) => {
   const articleResult = document.querySelector("article.result");
@@ -8,11 +8,12 @@ const buildResult = (playerScore, questionsArr) => {
   const ul = document.querySelector("ul");
   const h3 = document.querySelector("article aside header h3");
   const p = document.querySelector("article section p.content");
+  const figure = document.querySelector("article section figure");
   const description = document.querySelector("article aside p.description");
   const scorePercentage = Math.round((playerScore / questionsArr.length) * 100);
-  let primaryBtns = document.querySelector("article footer .btn-container");
+  let btnContainer = document.querySelector("article footer .btn-container");
   articleResult.classList.remove("hide");
-  primaryBtns.remove();
+  removeElements([btnContainer, figure]);
 
   ul.innerHTML = "";
   h2.innerText = "Resultat";
