@@ -23,16 +23,16 @@ const buildQuestion = (index) => {
         ul.append(li);
     });
     if(question.image != ""){
-        addImage("article section .row", question.image);
+        addImage("article section .row", question.image, question.alt);
     }
 }
 
-const addImage = (targetElement, image) => {
+const addImage = (targetElement, image, alt) => {
     const rowSection = document.querySelector(targetElement);
     const figure = document.createElement("figure");
     const img = document.createElement("img");
     img.src =`../images/${image}`;
-    img.alt = image;
+    img.alt = alt;
     figure.append(img);
     rowSection.append(figure);
 }

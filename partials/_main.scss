@@ -32,9 +32,9 @@ main {
   }
   ul.alternatives {
     flex: 1;
-    flex-grow: 2;
+    flex-grow: 1;
     min-width: 200px;
-    margin: 0px;
+    margin: 9px 9px 9px 0px;
     > li:first-child{
       margin-top: 0px;
     }

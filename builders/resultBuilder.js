@@ -14,7 +14,9 @@ const buildResult = (playerScore, questionsArr) => {
   let primaryBtns = document.querySelector("article footer .btn-container");
   articleResult.classList.remove("hide");
   primaryBtns.remove();
-  figure.remove();
+  if(figure != null){
+    figure.remove();
+  }
 
   ul.innerHTML = "";
   h2.innerText = "Resultat";
