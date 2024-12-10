@@ -86,6 +86,15 @@ main .circle#theme-mode:has(> input[type=checkbox]:checked) label:nth-last-child
 main .circle#theme-mode:has(> input[type=checkbox]:not(:checked)) label:nth-last-child(2) {
   display: none;
 }
+main ul.alternatives {
+  flex: 1;
+  flex-grow: 2;
+  min-width: 200px;
+  margin: 0px;
+}
+main ul.alternatives > li:first-child {
+  margin-top: 0px;
+}
 main .circle {
   display: flex;
   flex-flow: row;
@@ -145,6 +154,24 @@ main .accordion li label ~ * {
 }
 main .accordion li label:hover {
   background-color: var(--color-1-lighter);
+}
+main .row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex: 1;
+  flex-grow: 1;
+  margin: 5px 0px;
+}
+main .column {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex: 1;
+  flex-grow: 1;
+  margin: 5px 0px;
 }
 main .hide {
   display: none;
@@ -246,11 +273,32 @@ main article aside p,
 main article aside h3 {
   margin: 5px;
 }
+main article section {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
 main article section header {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: stretch;
+}
+main article section figure {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0px;
+  flex: 1;
+  flex-grow: 1;
+  min-width: 200px;
+}
+main article section figure img {
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 main article h2 {
   margin: 0;

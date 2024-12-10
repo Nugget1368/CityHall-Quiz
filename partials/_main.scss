@@ -30,6 +30,15 @@ main {
     label:nth-last-child(2) {
     display: none;
   }
+  ul.alternatives {
+    flex: 1;
+    flex-grow: 2;
+    min-width: 200px;
+    margin: 0px;
+    > li:first-child{
+      margin-top: 0px;
+    }
+  }
   .circle {
     @include flex(row, center, center);
     border: 2px solid var(--gray-dark);
@@ -40,8 +49,8 @@ main {
   .accordion {
     li.incorrect {
       background-color: var(--red-lighter);
-      &:hover{
-        background-color: var(--red-lighter);        
+      &:hover {
+        background-color: var(--red-lighter);
       }
       label {
         background-color: var(--red-light);
@@ -63,7 +72,7 @@ main {
       &:hover {
         background-color: var(--gray-light);
       }
-      
+
       .active {
         background-color: var(--color-1-lighter);
       }
@@ -85,6 +94,18 @@ main {
         }
       }
     }
+  }
+  .row {
+    @include flex(row wrap, $justify: flex-start);
+    flex: 1;
+    flex-grow: 1;
+    margin: 5px 0px;
+  }
+  .column {
+    @include flex(column, $justify: flex-start);
+    flex: 1;
+    flex-grow: 1;
+    margin: 5px 0px;
   }
   .hide {
     display: none;
@@ -174,8 +195,20 @@ main {
       }
     }
     section {
+      @include flex(column, $justify: flex-start);
       header {
         @include flex($justify: space-between);
+      }
+      figure {
+        @include flex($justify: center);
+        margin: 0px;
+        flex: 1;
+        flex-grow: 1;
+        min-width: 200px;
+        img {
+          width: 100%;
+          object-fit: fill;
+        }
       }
     }
     h2 {
@@ -188,7 +221,7 @@ main {
         @include flex(row, flex-start, flex-start);
         margin: 5px 0px;
         padding: 5px 0px;
-        label{
+        label {
           width: 100%;
         }
         &:hover {

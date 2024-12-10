@@ -27,7 +27,6 @@ nextBtn.addEventListener("click", () => {
     buildQuestion(questionIndex);
   } else {
     buildResult(playerScore, questionsCopy);
-    //TODO Byt ut knappar till avsluta knapp/starta om.
   }
 });
 

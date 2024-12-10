@@ -5,6 +5,7 @@ const questions = [
     answers: [3],
     description: [`Byggnationen av Stockholms Stadshus påbörjades 1911 och det mycket påkostade bygget stog färdigt 1923, och öppnades upp för folket samma år.`],
     iscorrect: false,
+    image: "stadshuset-stockholm.jpeg",
   },
   {
     question: `Stämmer det att Stadshuset är byggt på den mark där den s.k Eldkvarn tidigare stog innan den brann ner?`,
@@ -12,6 +13,7 @@ const questions = [
     answers: [0],
     description: [`Stadshuset är byggt på Eldkvarnstomten som platsen faktiskt heter. På tomten stog det som i folkmun kallas för Eldkvarn, en ångkvarn som avsåg vattenånga. 1878 väcktes en kraftig brand i kvarnen, men kvarnen totalförstördes inte, utan var i bruk fram till 1906 då man påbörjade rivningen av kvarnen för att få plats med ett visst nytt Stadshus.`],
     iscorrect: false,
+    image: "",
   },
   {
     question: `Vad heter arkitekten som har ritat Stockhoms Stadshus?`,
@@ -19,6 +21,7 @@ const questions = [
     answers: [1],
     description: [`1902 hölls en arkitekt-tävling som Ragnar Östberg vann, och han belönades med den stora äran att rita Stockholm Stadshus.`],
     iscorrect: false,
+    image: "",
   },
   {
     question: `Arkitekten var starkt influerad av olika historiska arkitetur-stilar, och det finns tydliga spår av detta i alla husets rum. Vilka av följande stilar var arkitekten inpirerad av?`,
@@ -26,6 +29,7 @@ const questions = [
     answers: [0, 2, 3],
     description: [`Den dominerande stilen är nationalromantiken som återfinns i mycket av Stadshusets konst och material.`, `Man kan se tydliga inlslag av italiensk renässans i bl.a Blå Hallen där man kan dra tydliga likheter med en itlaiensk innergård.`, `Man kan se hur arkitekten var mycket inspirerad av svensk barock och hur ett rum som är lågt i tak ofta följs av ett rum som är högt i tak, eller hur ett mörkt rum ofta följs av ett betydligt ljusare rum.`],
     iscorrect: false,
+    image: "",
   },
   {
     question: `Den 10:e December varje år äger Stadshusets mest kända evenemang rum, Nobelfesten. Idag hålls Nobelmiddagen i Blå Hallen men stämmer det att den tidigare ägt rum i Gyllene Salen?`,
@@ -35,6 +39,7 @@ const questions = [
       `Det var 1974 som antalet gäster till Nobelfesten vuxit så pass mycket att beslutet togs att permanent flytta middagen ner från Gyllene Salen till Blå Hallen. Det var dock inte första gången middagen flyttats till Blå Hallen utan där har den även ägt rum bl.a under 50-års jubileumet 1951.`,
     ],
     iscorrect: false,
+    image: "",
   },
   {
     question: `En vanlig missuppfattning är att nobelpriserna delas ut i Stocholms Stadshus under Nobelfesten, men det stämmer inte alls! Alla nobelpris förutom fredspriset delas ut i konserthuset, men det har det inte alltid gjort. \n\nPå vilka fler platser har Nobelpriset delats ut?`,
@@ -51,6 +56,7 @@ const questions = [
       `1991 firade man 90-årsjubileum i Globen.`,
     ],
     iscorrect: false,
+    image: "",
   },
   {
     question: `Blå Hallen är ett av Stadshusets mest berömda rum. Den har har en yta på 1500 kvadratmeter och är starkt influerad av italiensk renässans vilket tydligt speglas i bl.a pelargången som omringar hallen. \n\nMen hur kommer det sig att Blå Hallen kallas för just Blå Hallen, även fast att den inte är särskilt blå alls?`,
@@ -65,6 +71,7 @@ const questions = [
       `När arkitekten väl hade ändrat sin uppfattning om Blå Hallens utseende var det försent att försöka ändra på namnet. Blå Hallens namn stog redan i alla projektets ritningar, och det hade t.o.m skrivits om Blå Hallen i tidningarna, att försöka ändra på Blå Hallens namn nu ansågs vara på gränsen till omöjligt.`,
     ],
     iscorrect: false,
+    image: "",
   },
   {
     question: `Trappstegen i Blå Hallen-Trappen har specifika dimensioner och är lägre än vanliga trappsteg. Hur kommer det sig att den stora trappen i mitten av Blå Hallen är byggd som den är?`,
@@ -72,6 +79,7 @@ const questions = [
     answers: [3],
     description: [`Under byggnationen av Stadshuset, byggde Ragnar flertalet trätrappor. Därefter bad han sin fru och hennes vän att sätta på sig en klänning med högklackat, och gå upp och ner i trapporna för att därefter berätta för Ragnar vilken trappa de upplevde var den lättaste att gå i.`],
     iscorrect: false,
+    image: "",
   },
   {
     question: `Om man tittar noga på Blå Hallens långa vägg, mittemot den stora trappan och Gyllene salen, så kan man mellan det 2:a och 3:e fönstret se en stjärna inristad i teglet. Hur kommer det sig att den stjärnan sitter där?`,
@@ -79,6 +87,7 @@ const questions = [
     answers: [1, 3],
     description: [`Det kan kännas mycket nervöst för såväl kungligheter som nobelpristagare att gå ner för den stora trappen i Blå Hallen, med tusentals människor som beaktar en. Stjärnan sägs därför var till god hjälp för diverse hedersgäster när de går ner för trappan.`],
     iscorrect: false,
+    image: "",
   },
   {
     question: `Stadshuset fyller samma funktion idag som det gjorde när det invigt 1923, dels är det en byggnad gjord för evenemang men framförallt är det en politisk byggnad. Var tredje måndag hålls de politiska mötena i Rådsalen som har en mycket spännande arkitektur, bl.a påminner väggarna i rådsalen om spelet Tetris. Rådsalens arkitektur är givetvis inte inspirerat av spelet Tetris, men stämmer det att Rådsalen ska efterlikna ett upp- och nervänt vikingaskepp?`,
@@ -86,6 +95,7 @@ const questions = [
     answers: [1],
     description: [`Det har varit en teori att Östberg ska ha tagit inspiration ifrån vikingatiden när han ritade Rådsalen, men detta har starkt motbevisats då det inte finns några inslag av vikingatid någonstans i övriga delar av huset. Denna teori har dock tagit fart, troligtvis pga en fascination för vikingar ifrån dagens tid.`],
     iscorrect: false,
+    image: "",
   },
   {
     question: `På Gyllene Salens väggar hittar man bilder av händelser och betydelsefulla personer genom svensk historia. Det rör sig om bl.a olika krig, konungar, biskopar, vetenskapsmänn och kulturpersoner. \n\nMen vem är den stora kvinnan som har en hel vägg för sig själv i mitten av salen?`,
@@ -100,6 +110,7 @@ const questions = [
       `Mälardrottningen är en symbol av Stockholm och det sägs att konstnären Einar Forseth ska ha använt sig av sin egna fru som inspirationskälla när han bildade Mälardrottningen.`,
     ],
     iscorrect: false,
+    image: "",
   },
   {
     question: `Besökare av Gyllene Salen frågar sig ofta om mosaikerna som täcker väggarna i salen är gjorda av äkta guld. Är de det?`,
@@ -107,6 +118,7 @@ const questions = [
     answers: [0],
     description: [`Vardera mosaikbit är gjort av ett glaslager i botten, ett tunnt lager av guld i mitten, och ytterligare ett glaslager på toppen. Däremot är de färgade mosaikbitarna man ser i figurerna gjort av enbart färgat glas.`],
     iscorrect: false,
+    image: "",
   },
   {
     question: `Flertalet svenska konungar är avbildade på Gyllene Salens väggar. Vilken svensk kung var den första att införa allmänn självdeklaration?`,
@@ -114,6 +126,7 @@ const questions = [
     answers: [2],
     description: [`För att finansiera Sveriges militär infördes allmänn självdeklaration, liknande den självdeklaration vi har idag. Detta blev dock inte långvarigt och avförskaffades efter Karl XII:s död, 1718.`],
     iscorrect: false,
+    image: "",
   },
 ];
 

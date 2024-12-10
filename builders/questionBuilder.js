@@ -7,6 +7,10 @@ const buildQuestion = (index) => {
     const p = document.querySelector("p.content");
     const ul = document.querySelector("ul.alternatives")
     const inputType = question.answers.length > 1 ? "checkbox" : "radio";
+    let figure = document.querySelector("article section figure");
+    if(figure != null){
+        figure.remove();
+    }
     
     ul.innerHTML = "";
     header.innerText = `Fråga #${index + 1}`;
@@ -18,6 +22,20 @@ const buildQuestion = (index) => {
         alternativesIndex++;
         ul.append(li);
     });
+    if(question.image != ""){
+        addImage("article section .row", question.image);
+    }
 }
+
+const addImage = (targetElement, image) => {
+    const rowSection = document.querySelector(targetElement);
+    const figure = document.createElement("figure");
+    const img = document.createElement("img");
+    img.src =`../images/${image}`;
+    img.alt = image;
+    figure.append(img);
+    rowSection.append(figure);
+}
+
 
 export default buildQuestion;
