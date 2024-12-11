@@ -16,6 +16,7 @@ main{
 
 p{
      margin: 5px 0px;
+
 }
 
 label, button, input[type="checkbox"], input[type="radio"]{
@@ -23,4 +24,15 @@ label, button, input[type="checkbox"], input[type="radio"]{
   }
   p, h1, h2, h3{
     cursor:default;
+  }
+  p, li, label, button, a, span{
+    font-family: "Tinos", serif, Arial, sans-serif, Helvetica;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+  }
+  h1, h2, h3{
+    font-family: "Newsreader", serif, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-style: normal;
   }
