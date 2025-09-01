@@ -1,5 +1,5 @@
 import buildQuestion from "./builders/questionBuilder.js";
-import questions from "./models/questions.js";
+// import questions from "./models/questions.js";
 import {
   correct,
   showDescription,
@@ -7,14 +7,20 @@ import {
 } from "./services/correct-answer.js";
 import buildResult from "./builders/resultBuilder.js";
 import switchMode from "./services/darkMode.js";
+import ApiHandler from "./api/apiHandler.js";
+import Question from "./models/question.js";
+
+
+let questions = await ApiHandler.getQuestionsAsync();
 
 if(localStorage.getItem("theme")){
   switchMode(localStorage.getItem("theme"));
 }
 let questionIndex = 0;
 let playerScore = 0;
-let questionsCopy = [...questions];
-buildQuestion(questionIndex);
+let questionsCopy = questions.map((q) => new Question(q));
+console.log(questionsCopy);
+buildQuestion(questionsCopy[questionIndex], questionIndex);
 
 //Next question
 let nextBtn = document.querySelector("button#next-question");
@@ -24,7 +30,7 @@ nextBtn.addEventListener("click", () => {
   answerBtn.disabled = false;
   if (questionIndex < questionsCopy.length - 1) {
     questionIndex++;
-    buildQuestion(questionIndex);
+    buildQuestion(questionsCopy[questionIndex]);
   } else {
     buildResult(playerScore, questionsCopy);
   }
@@ -34,11 +40,11 @@ let answerBtn = document.querySelector("button#answer-question");
 answerBtn.addEventListener("click", () => {
   nextBtn.disabled = false;
   answerBtn.disabled = true;
-  let isCorrect = correct(questionIndex);
+  let isCorrect = correct(questionsCopy[questionIndex]);
   if (isCorrect) {
     playerScore++;
   }
-  showDescription(questionIndex, isCorrect);
+  showDescription(questionsCopy[questionIndex]);
 });
 
 let darkModeBox = document.querySelector("input#dark-mode");

@@ -5,9 +5,10 @@ import {
   
 export const buildAccordionQuestions = (targetSelector, questionsArray) => {
   questionsArray.forEach((question, index) => {
-    const correctAnswers = question.answers;
-    const correctAlternatives = `Rätt Svar: ${correctAnswers.map((answer) => "\n" + (answer+1) + ". " + question.alternatives[answer])}`;
-    const paragraphs = [question.question, correctAlternatives];
+    const correctAnswers = question.question.alternatives.answers;
+    //Kolla här
+    const correctAlternatives = `Rätt Svar: ${correctAnswers.map((answer) => "\n" + (answer+1) + ". " + question.question.alternatives.alternatives[answer])}`;
+    const paragraphs = [question.question.question, correctAlternatives];
     buildAccordion(targetSelector, `Fråga #${index + 1}`, paragraphs);
     if(!question.iscorrect){
         markIncorrect(index);
